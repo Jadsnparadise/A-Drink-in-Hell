@@ -14,16 +14,33 @@ public class PlayerController : MonoBehaviour
 
     //References
     Rigidbody2D rb;
+    Animator anim;
+
+    public static PlayerController Instance;
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        anim = GetComponent<Animator>();
     }
 
     void Update()
     {
         Move();
         Jump();
+        Flip();
         GetInputs();
     }
 
@@ -34,6 +51,18 @@ public class PlayerController : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         isGrounded = true;
+    }
+
+    void Flip()
+    {
+        if (xAxis < 0)
+        {
+            transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
+        else if (xAxis > 0)
+        {
+            transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
+        }
     }
 
     private void Jump()
@@ -48,19 +77,13 @@ public class PlayerController : MonoBehaviour
             rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             isGrounded = false;
         }
+
+        anim.SetBool("Jumping", !isGrounded);
     }
 
     void Move()
     {
         rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
+        anim.SetBool("Walking", rb.velocity.x != 0 && isGrounded);
     }
-
-    //foreach (ContactPoint2D contactPoint in collision.contacts)
-    //{
-    //    if (contactPoint.normal.y > 0.5f)
-    //    {
-    //        isGrounded = true;
-    //        break;
-    //    }
-    //}
 }
