@@ -6,11 +6,13 @@ public class PlayerController : MonoBehaviour
 {
     [Header("Horizontal Movement Settings")]
     //Movement
-    [SerializeField] private float walkSpeed = 1;
+    [SerializeField] private float walkSpeed = 1f;
+    [SerializeField] private float runSpeed = 2f;
     private float xAxis;
 
     [SerializeField] private float jumpForce = 1;
     private bool isGrounded = false;
+    private bool isRunning = false;
 
     //References
     Rigidbody2D rb;
@@ -47,6 +49,7 @@ public class PlayerController : MonoBehaviour
     void GetInputs()
     {
         xAxis = Input.GetAxisRaw("Horizontal");
+        isRunning = Input.GetKey(KeyCode.LeftShift) && xAxis != 0;
     }
 
     void Flip()
@@ -98,7 +101,12 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(walkSpeed * xAxis, rb.velocity.y);
+
+        float speed = isRunning ? runSpeed : walkSpeed;
+
+        rb.velocity = new Vector2(speed * xAxis, rb.velocity.y);
+
         anim.SetBool("Walking", rb.velocity.x != 0 && isGrounded);
+        anim.SetBool("Running", isRunning && isGrounded);
     }
 }
