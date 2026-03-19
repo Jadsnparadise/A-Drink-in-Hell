@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: fbd9904d4ef35334cbe9f99b6c421d6c
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 8422307579668830947
+    second: poeiraarcana_0
+  - first:
+      213: -2184555504147651863
+    second: poeiraarcana_1
+  - first:
+      213: 87958596279871398
+    second: poeiraarcana_2
+  - first:
+      213: 8631225806368712256
+    second: poeiraarcana_3
+  - first:
+      213: 7555842442985626186
+    second: poeiraarcana_4
+  - first:
+      213: -5960354766896823171
+    second: poeiraarcana_5
+  - first:
+      213: -7018350688927071657
+    second: poeiraarcana_6
+  - first:
+      213: 4025628403550401718
+    second: poeiraarcana_7
+  - first:
+      213: -7959757692847999854
+    second: poeiraarcana_8
+  - first:
+      213: 6531419204411997376
+    second: poeiraarcana_9
+  - first:
+      213: -5032967202923405457
+    second: poeiraarcana_10
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: poeiraarcana_1
+      rect:
+        serializedVersion: 2
+        x: 615
+        y: 379
+        width: 276
+        height: 364
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9e2a72fd756eea1e0800000000000000
+      internalID: -2184555504147651863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poeiraarcana_7
+      rect:
+        serializedVersion: 2
+        x: 1045
+        y: 379
+        width: 269
+        height: 336
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b4385f44b7edd730800000000000000
+      internalID: 4025628403550401718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: poeiraarcana_9
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 381
+        width: 247
+        height: 302
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cc3426592344aa50800000000000000
+      internalID: 6531419204411997376
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 4a20e7ad078a82e4986f1043c7ce1a57
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      poeiraarcana_0: 8422307579668830947
+      poeiraarcana_1: -2184555504147651863
+      poeiraarcana_10: -5032967202923405457
+      poeiraarcana_2: 87958596279871398
+      poeiraarcana_3: 8631225806368712256
+      poeiraarcana_4: 7555842442985626186
+      poeiraarcana_5: -5960354766896823171
+      poeiraarcana_6: -7018350688927071657
+      poeiraarcana_7: 4025628403550401718
+      poeiraarcana_8: -7959757692847999854
+      poeiraarcana_9: 6531419204411997376
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,219 @@
+fileFormatVersion: 2
+guid: 847d45069312e404fbababce7537a4a3
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 523774325352777000
+    second: gelo9circulo_0
+  - first:
+      213: -4451999838429953967
+    second: gelo9circulo_1
+  - first:
+      213: 7949034735894110765
+    second: gelo9circulo_2
+  - first:
+      213: -4194338824456573125
+    second: gelo9circulo_3
+  - first:
+      213: -4928427501900813428
+    second: gelo9circulo_4
+  - first:
+      213: -6161733104889023986
+    second: gelo9circulo_5
+  - first:
+      213: -8756948627204903537
+    second: gelo9circulo_6
+  - first:
+      213: 492303809868433185
+    second: gelo9circulo_7
+  - first:
+      213: -6644516621610019334
+    second: gelo9circulo_8
+  - first:
+      213: -4323552180570860787
+    second: gelo9circulo_9
+  - first:
+      213: 2368377184900442873
+    second: gelo9circulo_10
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: gelo9circulo_0
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 380
+        width: 322
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8254f1d49f1d44700800000000000000
+      internalID: 523774325352777000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gelo9circulo_1
+      rect:
+        serializedVersion: 2
+        x: 1086
+        y: 375
+        width: 326
+        height: 353
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 15049421cb15732c0800000000000000
+      internalID: -4451999838429953967
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gelo9circulo_8
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 379
+        width: 328
+        height: 350
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af591c8365fe9c3a0800000000000000
+      internalID: -6644516621610019334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7477d47ad0def8a41a73021f42400765
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      gelo9circulo_0: 523774325352777000
+      gelo9circulo_1: -4451999838429953967
+      gelo9circulo_10: 2368377184900442873
+      gelo9circulo_2: 7949034735894110765
+      gelo9circulo_3: -4194338824456573125
+      gelo9circulo_4: -4928427501900813428
+      gelo9circulo_5: -6161733104889023986
+      gelo9circulo_6: -8756948627204903537
+      gelo9circulo_7: 492303809868433185
+      gelo9circulo_8: -6644516621610019334
+      gelo9circulo_9: -4323552180570860787
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

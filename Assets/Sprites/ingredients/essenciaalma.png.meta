@@ -1,0 +1,247 @@
+fileFormatVersion: 2
+guid: a6bba6f871f128d409fc896cab96cfb7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5546658895146279912
+    second: essenciaalma_0
+  - first:
+      213: -3303589710035793902
+    second: essenciaalma_1
+  - first:
+      213: -5195645572595366442
+    second: essenciaalma_2
+  - first:
+      213: -3130119034379663921
+    second: essenciaalma_3
+  - first:
+      213: 8890826437216418671
+    second: essenciaalma_4
+  - first:
+      213: 986090482910505122
+    second: essenciaalma_5
+  - first:
+      213: 8467331605645737117
+    second: essenciaalma_6
+  - first:
+      213: 2062156074173205221
+    second: essenciaalma_7
+  - first:
+      213: 6719784760396137118
+    second: essenciaalma_8
+  - first:
+      213: -4686055713211894964
+    second: essenciaalma_9
+  - first:
+      213: -3915159189627725402
+    second: essenciaalma_10
+  - first:
+      213: 281033837683487423
+    second: essenciaalma_11
+  - first:
+      213: -5776556595237385687
+    second: essenciaalma_12
+  - first:
+      213: -4586723334200288874
+    second: essenciaalma_13
+  - first:
+      213: 8162577697145463154
+    second: essenciaalma_14
+  - first:
+      213: -8158523430217432512
+    second: essenciaalma_15
+  - first:
+      213: -5256255735607060990
+    second: essenciaalma_16
+  - first:
+      213: 1470453279111400737
+    second: essenciaalma_17
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: essenciaalma_0
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 329
+        width: 303
+        height: 400
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8e3647fa0e0b9fc40800000000000000
+      internalID: 5546658895146279912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: essenciaalma_1
+      rect:
+        serializedVersion: 2
+        x: 598
+        y: 310
+        width: 351
+        height: 487
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2184ea179aa4722d0800000000000000
+      internalID: -3303589710035793902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: essenciaalma_3
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 304
+        width: 381
+        height: 521
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fc58c1382559f84d0800000000000000
+      internalID: -3130119034379663921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7c8833da9bbce8948b7c95f25dc57e60
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      essenciaalma_0: 5546658895146279912
+      essenciaalma_1: -3303589710035793902
+      essenciaalma_10: -3915159189627725402
+      essenciaalma_11: 281033837683487423
+      essenciaalma_12: -5776556595237385687
+      essenciaalma_13: -4586723334200288874
+      essenciaalma_14: 8162577697145463154
+      essenciaalma_15: -8158523430217432512
+      essenciaalma_16: -5256255735607060990
+      essenciaalma_17: 1470453279111400737
+      essenciaalma_2: -5195645572595366442
+      essenciaalma_3: -3130119034379663921
+      essenciaalma_4: 8890826437216418671
+      essenciaalma_5: 986090482910505122
+      essenciaalma_6: 8467331605645737117
+      essenciaalma_7: 2062156074173205221
+      essenciaalma_8: 6719784760396137118
+      essenciaalma_9: -4686055713211894964
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
