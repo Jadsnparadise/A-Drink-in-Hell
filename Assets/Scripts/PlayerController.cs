@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,16 +41,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        GetInputs();
         Move();
         Jump();
         Flip();
-        GetInputs();
+        
+        if (Input.GetKeyDown(KeyCode.H))
+            GameManager.Instance.DamagePlayer(1);
     }
 
     void GetInputs()
     {
-        xAxis = Input.GetAxisRaw("Horizontal");
-        isRunning = Input.GetKey(KeyCode.LeftShift) && xAxis != 0;
+        xAxis = 0;
+        if (Input.GetKey(KeyCode.A) ||  Input.GetKey(KeyCode.LeftArrow))
+            xAxis -= 1;
+        if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+            xAxis += 1;
+        isRunning = Input.GetKey(KeyCode.LeftShift) || Input.GetKey(KeyCode.RightShift);
     }
 
     void Flip()
@@ -101,12 +109,12 @@ public class PlayerController : MonoBehaviour
 
     void Move()
     {
-
-        float speed = isRunning ? runSpeed : walkSpeed;
+        var speed = isRunning ? runSpeed : walkSpeed;
 
         rb.velocity = new Vector2(speed * xAxis, rb.velocity.y);
 
-        anim.SetBool("Walking", rb.velocity.x != 0 && isGrounded);
-        anim.SetBool("Running", isRunning && isGrounded);
+        var moving = rb.velocity.x != 0 && isGrounded;
+        anim.SetBool("Walking", moving);
+        anim.SetBool("Running", moving && isRunning);
     }
 }

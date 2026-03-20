@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -21,7 +22,12 @@ public class GameManager : MonoBehaviour
         public string drinkName;
         public List<string> ingredients;
     }
-
+    
+    [Header("Health")]
+    public Health PlayerHealth;
+    
+    [Header("Panels")]
+    [SerializeField] private GameOverUI gameOverUI;
 
     private void Awake()
     {
@@ -32,6 +38,7 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
+        PlayerHealth = new Health(3);
     }
 
     void Start()
@@ -94,5 +101,18 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("DRINK COMPLETO!");
         }
+    }
+
+    public void DamagePlayer(int damage)
+    {
+        PlayerHealth.TakeDamage(damage);
+
+        if (PlayerHealth.IsDead())
+            PlayerDied();
+    }
+
+    private void PlayerDied()
+    {
+        gameOverUI.ShowGameOver();
     }
 }
