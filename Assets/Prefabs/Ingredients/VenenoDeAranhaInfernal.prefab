@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Veneno de Aranha Infernal
+  ingredientSprite: {fileID: 5507085628391996792}

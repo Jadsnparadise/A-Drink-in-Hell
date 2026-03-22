@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Pimenta do Abismo
+  ingredientSprite: {fileID: 1988338355422872125}

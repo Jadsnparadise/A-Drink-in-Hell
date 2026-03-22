@@ -3,19 +3,13 @@ using UnityEngine;
 
 public class IngredientSpawner : MonoBehaviour
 {
-    [System.Serializable]
-    public class IngredientPrefab
-    {
-        public string name;
-        public GameObject prefab;
-    }
 
-    [SerializeField] private List<IngredientPrefab> ingredientPrefabs;
+    [SerializeField] private List<IngredientData> ingredientPrefabs;
     [SerializeField] private Transform[] spawnPoints;
 
-    public void SpawnIngredients(List<string> requiredIngredients)
+    public void SpawnIngredients(List<IngredientData> requiredIngredients)
     {
-        List<string> pool = new List<string>();
+        List<IngredientData> pool = new List<IngredientData>();
 
         // Garante pelo menos 1 de cada
         pool.AddRange(requiredIngredients);
@@ -23,7 +17,7 @@ public class IngredientSpawner : MonoBehaviour
         // Preenche o resto aleatoriamente
         while (pool.Count < spawnPoints.Length)
         {
-            string random = requiredIngredients[Random.Range(0, requiredIngredients.Count)];
+            IngredientData random = requiredIngredients[Random.Range(0, requiredIngredients.Count)];
             pool.Add(random);
         }
 
@@ -37,7 +31,7 @@ public class IngredientSpawner : MonoBehaviour
         // Spawn
         for (int i = 0; i < spawnPoints.Length; i++)
         {
-            GameObject prefab = GetPrefabByName(pool[i]);
+            GameObject prefab = GetPrefabByName(pool[i].name);
 
             if (prefab != null)
             {

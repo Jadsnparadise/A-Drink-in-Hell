@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "L\xE1grima de Pecador"
+  ingredientSprite: {fileID: 3280160512725233577}

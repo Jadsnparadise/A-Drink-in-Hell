@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "Sal Amaldi\xE7oado"
+  ingredientSprite: {fileID: 434703920817544277}

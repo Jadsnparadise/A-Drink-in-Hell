@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,11 +8,11 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     [Header("Ingredients")]
-    [SerializeField] private List<string> requiredIngredients = new List<string>();
-    private List<string> collectedIngredients = new List<string>();
+    [SerializeField] private List<IngredientData> requiredIngredients = new List<IngredientData>();
+    private List<IngredientData> collectedIngredients = new List<IngredientData>();
 
     [Header("Drinks")]
-    [SerializeField] private List<Drink> drinks = new List<Drink>();
+    [SerializeField] private List<Drink> drinks;
     private Drink currentDrink;
 
     [SerializeField] private IngredientSpawner spawner;
@@ -20,7 +21,7 @@ public class GameManager : MonoBehaviour
     public class Drink
     {
         public string drinkName;
-        public List<string> ingredients;
+        public List<IngredientData> ingredients;
     }
     
     [Header("Health")]
@@ -73,9 +74,9 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("Drink selecionado: " + currentDrink.drinkName);
 
-        foreach (string ing in requiredIngredients)
+        foreach (IngredientData ing in requiredIngredients)
         {
-            Debug.Log("Ingrediente: " + ing);
+            Debug.Log("Ingrediente: " + ing.name);
         }
     }
 
@@ -86,12 +87,17 @@ public class GameManager : MonoBehaviour
 
     public void CollectIngredient(string ingredient)
     {
-        if (requiredIngredients.Contains(ingredient) && !collectedIngredients.Contains(ingredient))
+        foreach (IngredientData requiredIngredient in requiredIngredients)
         {
-            collectedIngredients.Add(ingredient);
-            Debug.Log("Coletou: " + ingredient);
+            if (requiredIngredient.ingredientName == ingredient && !collectedIngredients.Contains(requiredIngredient)) 
+            {
+                collectedIngredients.Add(requiredIngredient);
 
-            CheckWin();
+                Debug.Log("Coletou: " + ingredient);
+
+                CheckWin();
+                break;
+            }
         }
     }
 

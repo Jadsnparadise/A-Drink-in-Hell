@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Poeira Arcana
+  ingredientSprite: {fileID: 8653897914586907838}

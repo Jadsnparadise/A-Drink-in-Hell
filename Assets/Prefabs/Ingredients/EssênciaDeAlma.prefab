@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "Ess\xEAncia de Alma"
+  ingredientSprite: {fileID: 4154182636405679289}

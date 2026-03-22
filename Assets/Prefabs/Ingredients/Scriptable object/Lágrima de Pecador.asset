@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669d201c494da1743ba77b7ccea5d065, type: 3}
+  m_Name: "L\xE1grima de Pecador"
+  m_EditorClassIdentifier: 
+  ingredientName: "L\xE1grima de Pecador"
+  prefab: {fileID: 4807206673489179983, guid: 6adb212841ccc7f4f9ce48bf65663a6b, type: 3}
+  ingredientSprite: {fileID: 0}

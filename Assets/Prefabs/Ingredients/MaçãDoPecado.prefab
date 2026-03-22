@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "Ma\xE7\xE3 do Pecado"
+  ingredientSprite: {fileID: 1378498426919637637}

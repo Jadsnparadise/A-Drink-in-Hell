@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 669d201c494da1743ba77b7ccea5d065, type: 3}
+  m_Name: Veneno de Aranha Infernal
+  m_EditorClassIdentifier: 
+  ingredientName: Veneno de Aranha Infernal
+  prefab: {fileID: 6173910601264070975, guid: 90050aa0539667543b0b9f2474033046, type: 3}
+  ingredientSprite: {fileID: 5507085628391996792, guid: 90050aa0539667543b0b9f2474033046, type: 3}

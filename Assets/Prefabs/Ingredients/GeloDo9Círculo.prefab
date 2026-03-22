@@ -145,3 +145,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "Gelo do 9\xBA C\xEDrculo"
+  ingredientSprite: {fileID: 6216010959639132626}
