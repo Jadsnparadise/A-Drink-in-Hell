@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
     //References
     Rigidbody2D rb;
     Animator anim;
+    PlayerAttack _attack;
 
     public static PlayerController Instance;
 
@@ -37,10 +38,17 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        _attack = GetComponent<PlayerAttack>();
     }
 
     void Update()
     {
+        if (_attack != null && _attack.IsAttacking())
+        {
+            rb.velocity = Vector2.zero;
+            return;
+        }
+        
         GetInputs();
         Move();
         Jump();
@@ -62,11 +70,11 @@ public class PlayerController : MonoBehaviour
 
     void Flip()
     {
-        if (xAxis < 0)
+        if (xAxis > 0)
         {
             transform.localScale = new Vector2(-Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
-        else if (xAxis > 0)
+        else if (xAxis < 0)
         {
             transform.localScale = new Vector2(Mathf.Abs(transform.localScale.x), transform.localScale.y);
         }
@@ -110,7 +118,7 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         var speed = isRunning ? runSpeed : walkSpeed;
-
+        
         rb.velocity = new Vector2(speed * xAxis, rb.velocity.y);
 
         var moving = rb.velocity.x != 0 && isGrounded;
