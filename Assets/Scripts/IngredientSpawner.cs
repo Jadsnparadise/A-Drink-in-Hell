@@ -6,6 +6,10 @@ public class IngredientSpawner : MonoBehaviour
 
     [SerializeField] private List<IngredientData> ingredientPrefabs;
     [SerializeField] private Transform[] spawnPoints;
+    private void Start()
+    {
+        GameManager.Instance.StartRound(this);
+    }
 
     public void SpawnIngredients(List<IngredientData> requiredIngredients)
     {

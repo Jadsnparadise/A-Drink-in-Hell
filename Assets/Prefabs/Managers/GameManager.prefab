@@ -61,5 +61,5 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2d93961fd06c5104f9e6689554c05636, type: 2}
     - {fileID: 11400000, guid: 6b1d4184fdb925e449a83ad8a3374063, type: 2}
     - {fileID: 11400000, guid: 81359cb67f24d0544bfd741e575642bf, type: 2}
-  spawner: {fileID: 0}
+  firstTimeTalkingToSatan: 0
   gameOverUI: {fileID: 0}
