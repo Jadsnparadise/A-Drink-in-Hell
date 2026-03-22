@@ -1,21 +1,20 @@
 using System.Collections.Generic;
-using System.Linq;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
     [Header("Ingredients")]
-    [SerializeField] private List<IngredientData> requiredIngredients = new List<IngredientData>();
+    [SerializeField] private List<IngredientData> requiredIngredients;
     private List<IngredientData> collectedIngredients = new List<IngredientData>();
 
     [Header("Drinks")]
     [SerializeField] private List<Drink> drinks;
     private Drink currentDrink;
 
-    [SerializeField] private IngredientSpawner spawner;
+    [Header("Game State")]
+    public bool firstTimeTalkingToSatan;
 
     [System.Serializable]
     public class Drink
@@ -42,12 +41,12 @@ public class GameManager : MonoBehaviour
         PlayerHealth = new Health(3);
     }
 
-    void Start()
+    private void Start()
     {
-        StartRound();
+        firstTimeTalkingToSatan = PlayerPrefs.GetInt("first Time", 0) != 0;
     }
 
-    void StartRound()
+    public void StartRound(IngredientSpawner spawner)
     {
         collectedIngredients.Clear();
 
@@ -58,7 +57,7 @@ public class GameManager : MonoBehaviour
         spawner.SpawnIngredients(requiredIngredients);
     }
 
-    void SelectRandomDrink()
+    public void SelectRandomDrink()
     {
         if (drinks.Count == 0)
         {
