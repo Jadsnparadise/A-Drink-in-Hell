@@ -12,6 +12,9 @@ public class PlayerController : MonoBehaviour
     private float xAxis;
 
     [SerializeField] private float jumpForce = 1;
+
+    //state flags
+    public bool isTalking = false;
     private bool isGrounded = false;
     private bool isRunning = false;
 
@@ -43,6 +46,21 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        if (isTalking)
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+
+            anim.SetBool("Walking", false);
+            anim.SetBool("Running", false);
+
+            if (_attack != null) _attack.enabled = false;
+
+            return;
+        }
+        else{
+            _attack.enabled = true;
+        }
+
         if (_attack != null && _attack.IsAttacking())
         {
             rb.velocity = Vector2.zero;

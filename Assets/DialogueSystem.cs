@@ -85,6 +85,7 @@ public class DialogueSystem : MonoBehaviour
             yield return new WaitForSeconds(endEventDelay);
         }
 
+        uiText.transform.parent.gameObject.SetActive(false);
         onDialogueEnd?.Invoke();
         dialogueCoroutine = null;
     }

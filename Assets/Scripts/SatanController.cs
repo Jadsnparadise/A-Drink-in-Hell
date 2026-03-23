@@ -14,7 +14,9 @@ public class SatanController : MonoBehaviour
 
     private void Start()
     {
-        gameManager = GameManager.Instance;       
+        gameManager = GameManager.Instance;      
+        firstTalk.onDialogueEnd.AddListener(EndTalk);
+        othersTalk.onDialogueEnd.AddListener(EndTalk);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -24,7 +26,7 @@ public class SatanController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             onArriveOnSatan?.Invoke();
-            collision.gameObject.GetComponent<PlayerController>().enabled = false;
+            PlayerController.Instance.isTalking= true;
             if (gameManager.firstTimeTalkingToSatan)
             {
                 firstTalk.StartDialogue();
@@ -42,5 +44,14 @@ public class SatanController : MonoBehaviour
         }
     }
     
+    private void EndTalk()
+    {
+        PlayerController.Instance.isTalking = false;
+    }
 
+    private void OnDestroy()
+    {
+        firstTalk.onDialogueEnd.RemoveListener(EndTalk);
+        othersTalk.onDialogueEnd.RemoveListener(EndTalk);
+    }
 }
