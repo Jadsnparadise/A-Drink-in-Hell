@@ -801,6 +801,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 210036979}
     - target: {fileID: 5586471954782106257, guid: eed67d2aea0c02f4b90daae2bf893491, type: 3}
+      propertyPath: delayToReleasePlayer
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5586471954782106257, guid: eed67d2aea0c02f4b90daae2bf893491, type: 3}
       propertyPath: onArriveOnSatan.m_PersistentCalls.m_Calls.Array.size
       value: 0
       objectReference: {fileID: 0}

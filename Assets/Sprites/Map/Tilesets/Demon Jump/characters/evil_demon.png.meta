@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      evil_demon_0: -1791168420589599218
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

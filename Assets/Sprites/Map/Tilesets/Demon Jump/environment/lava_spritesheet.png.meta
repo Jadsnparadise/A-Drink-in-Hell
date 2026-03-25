@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      lava_spritesheet_0: 5719224580651739166
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      BL-lava-tileset-itch_0: 8191507075521383696
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

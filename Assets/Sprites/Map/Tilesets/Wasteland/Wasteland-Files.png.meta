@@ -776,7 +776,35 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wasteland-Files_0: -5009175897739757725
+      Wasteland-Files_1: 6387321726426987482
+      Wasteland-Files_10: -7709487935712729354
+      Wasteland-Files_11: 4454046651481978072
+      Wasteland-Files_12: -7421627774083863198
+      Wasteland-Files_13: -3188899314811879041
+      Wasteland-Files_14: -7150785271023723508
+      Wasteland-Files_15: -1686293458281269898
+      Wasteland-Files_16: -5401816950491729245
+      Wasteland-Files_17: -6214515562381486991
+      Wasteland-Files_18: 3822830255387112860
+      Wasteland-Files_19: -3728813740238654318
+      Wasteland-Files_2: 2723354170786812089
+      Wasteland-Files_20: 6318140915392998915
+      Wasteland-Files_21: -7339646329574996985
+      Wasteland-Files_22: 1888862166462719158
+      Wasteland-Files_23: 3343285283335237647
+      Wasteland-Files_24: -3328814510721419577
+      Wasteland-Files_25: -6625015160611382563
+      Wasteland-Files_26: -3847609097802227114
+      Wasteland-Files_27: 5105349975658415830
+      Wasteland-Files_3: -2759939066649403796
+      Wasteland-Files_4: -2296238063923070078
+      Wasteland-Files_5: -6416387199887158751
+      Wasteland-Files_6: -6432868793810039024
+      Wasteland-Files_7: -8878904819087269197
+      Wasteland-Files_8: 4283657712765112710
+      Wasteland-Files_9: -5656984376889979709
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

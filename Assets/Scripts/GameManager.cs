@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -105,7 +106,15 @@ public class GameManager : MonoBehaviour
         if (collectedIngredients.Count == requiredIngredients.Count)
         {
             Debug.Log("DRINK COMPLETO!");
+            Invoke(nameof(GoToSatan), 2f);
         }
+
+        
+    }
+
+    private void GoToSatan()
+    {
+        SceneManager.LoadScene(0);
     }
 
     public void DamagePlayer(int damage)

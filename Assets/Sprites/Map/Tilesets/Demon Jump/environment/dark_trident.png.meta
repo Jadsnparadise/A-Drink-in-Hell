@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      dark_trident_0: 881997559112640631
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

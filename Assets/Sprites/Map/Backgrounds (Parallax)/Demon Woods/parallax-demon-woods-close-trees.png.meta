@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      parallax-demon-woods-close-trees_0: 4044950172800378670
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

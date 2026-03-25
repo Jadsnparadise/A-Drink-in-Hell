@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -7,14 +8,15 @@ public class SatanController : MonoBehaviour
     private GameManager gameManager;
     [SerializeField] private DialogueSystem firstTalk;
     [SerializeField] private DialogueSystem othersTalk;
+    [SerializeField] private float delayToReleasePlayer = 0.5f;
 
     public UnityEvent onArriveOnSatan;
 
     private void Start()
     {
         gameManager = GameManager.Instance;      
-        firstTalk.onDialogueEnd.AddListener(EndTalk);
-        othersTalk.onDialogueEnd.AddListener(EndTalk);
+        firstTalk.onDialogueEnd.AddListener(FreePlayer);
+        othersTalk.onDialogueEnd.AddListener(FreePlayer);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -42,14 +44,20 @@ public class SatanController : MonoBehaviour
         }
     }
     
-    private void EndTalk()
+    private void FreePlayer()
     {
+        StartCoroutine(nameof(EndTalk));
+    }
+
+    private IEnumerator EndTalk()
+    {
+        yield return new WaitForSeconds(delayToReleasePlayer);
         PlayerController.Instance.isTalking = false;
     }
 
     private void OnDestroy()
     {
-        firstTalk.onDialogueEnd.RemoveListener(EndTalk);
-        othersTalk.onDialogueEnd.RemoveListener(EndTalk);
+        firstTalk.onDialogueEnd.RemoveListener(FreePlayer);
+        othersTalk.onDialogueEnd.RemoveListener(FreePlayer);
     }
 }

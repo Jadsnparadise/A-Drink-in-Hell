@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Wasteland_Mountains_2_0: 1504713465387620002
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

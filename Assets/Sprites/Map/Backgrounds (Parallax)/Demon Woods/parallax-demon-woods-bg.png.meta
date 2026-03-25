@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      parallax-demon-woods-bg_0: -3112928427010784102
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

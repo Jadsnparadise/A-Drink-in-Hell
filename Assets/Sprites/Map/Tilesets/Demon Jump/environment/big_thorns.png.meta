@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      big_thorns_0: -255748704857304569
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

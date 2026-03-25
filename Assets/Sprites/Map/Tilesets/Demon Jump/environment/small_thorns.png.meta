@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      small_thorns_0: 7273423829473124098
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
