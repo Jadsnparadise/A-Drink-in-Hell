@@ -1,0 +1,1288 @@
+fileFormatVersion: 2
+guid: 9dae0cfb9d78e234ba6fbdbb0603c5b4
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 5387138633821101477
+    second: CaveG_RED_0
+  - first:
+      213: 7750849516178552221
+    second: CaveG_RED_1
+  - first:
+      213: -6982430778797487955
+    second: CaveG_RED_2
+  - first:
+      213: -781817190193843247
+    second: CaveG_RED_3
+  - first:
+      213: -8899554231894660238
+    second: CaveG_RED_4
+  - first:
+      213: -4228763127548558252
+    second: CaveG_RED_5
+  - first:
+      213: -1192808756859938983
+    second: CaveG_RED_6
+  - first:
+      213: -8802389710559099383
+    second: CaveG_RED_7
+  - first:
+      213: 1544672872624727801
+    second: CaveG_RED_8
+  - first:
+      213: 6796403151052421559
+    second: CaveG_RED_9
+  - first:
+      213: 169797559327716818
+    second: CaveG_RED_10
+  - first:
+      213: -4770662793654200083
+    second: CaveG_RED_11
+  - first:
+      213: -3846359288676783525
+    second: CaveG_RED_12
+  - first:
+      213: 7224170607489638864
+    second: CaveG_RED_13
+  - first:
+      213: -3312993876341379484
+    second: CaveG_RED_14
+  - first:
+      213: 3793023691267073300
+    second: CaveG_RED_15
+  - first:
+      213: 4672930157781778210
+    second: CaveG_RED_16
+  - first:
+      213: -1876165432802824806
+    second: CaveG_RED_17
+  - first:
+      213: 7385967179517961410
+    second: CaveG_RED_18
+  - first:
+      213: 6759796657639439005
+    second: CaveG_RED_19
+  - first:
+      213: 8968912034039439790
+    second: CaveG_RED_20
+  - first:
+      213: -4999774582114578594
+    second: CaveG_RED_21
+  - first:
+      213: -1577312519597250912
+    second: CaveG_RED_22
+  - first:
+      213: -6281400456189312893
+    second: CaveG_RED_23
+  - first:
+      213: 1025843077095087375
+    second: CaveG_RED_24
+  - first:
+      213: -7192219537772493577
+    second: CaveG_RED_25
+  - first:
+      213: 386292170158025906
+    second: CaveG_RED_26
+  - first:
+      213: 7199138797033329560
+    second: CaveG_RED_27
+  - first:
+      213: -3600639781502587932
+    second: CaveG_RED_28
+  - first:
+      213: -79750725263336597
+    second: CaveG_RED_29
+  - first:
+      213: 5265315843836963319
+    second: CaveG_RED_30
+  - first:
+      213: -4101786230526649612
+    second: CaveG_RED_31
+  - first:
+      213: 2548916211430400694
+    second: CaveG_RED_32
+  - first:
+      213: -135800282511414113
+    second: CaveG_RED_33
+  - first:
+      213: -4237728676942244722
+    second: CaveG_RED_34
+  - first:
+      213: -964275475779256940
+    second: CaveG_RED_35
+  - first:
+      213: 561364468568142540
+    second: CaveG_RED_36
+  - first:
+      213: -521485657165778565
+    second: CaveG_RED_37
+  - first:
+      213: -7223486598788198314
+    second: CaveG_RED_38
+  - first:
+      213: 7944752401733792767
+    second: CaveG_RED_39
+  - first:
+      213: -3109046908909895047
+    second: CaveG_RED_40
+  - first:
+      213: -5400819468566243228
+    second: CaveG_RED_41
+  - first:
+      213: -4652182316011892894
+    second: CaveG_RED_42
+  - first:
+      213: -8297910031915046844
+    second: CaveG_RED_43
+  - first:
+      213: -3748153836577736176
+    second: CaveG_RED_44
+  - first:
+      213: -2705451830517210216
+    second: CaveG_RED_45
+  - first:
+      213: 4666967487379149856
+    second: CaveG_RED_46
+  - first:
+      213: -159258481652886521
+    second: CaveG_RED_47
+  - first:
+      213: -4044333281198984270
+    second: CaveG_RED_48
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: CaveG_RED_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 480
+        width: 97
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ad90b09b06f2ca40800000000000000
+      internalID: 5387138633821101477
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 480
+        width: 96
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d95b457b19c809b60800000000000000
+      internalID: 7750849516178552221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_2
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 479
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: da88501833c691f90800000000000000
+      internalID: -6982430778797487955
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_3
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 479
+        width: 98
+        height: 97
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d3b333686d6625f0800000000000000
+      internalID: -781817190193843247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_4
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 479
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27b2894f39e6e7480800000000000000
+      internalID: -8899554231894660238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_5
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 479
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 454c237275a6055c0800000000000000
+      internalID: -4228763127548558252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_6
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 479
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 957536261ca427fe0800000000000000
+      internalID: -1192808756859938983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 906429ff131a7d580800000000000000
+      internalID: -8802389710559099383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 416
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f6aafa2bc7cf6510800000000000000
+      internalID: 1544672872624727801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_9
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b933d038aca15e50800000000000000
+      internalID: 6796403151052421559
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_10
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d5f4770bfd3b5200800000000000000
+      internalID: 169797559327716818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_11
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de8911917733bcdb0800000000000000
+      internalID: -4770662793654200083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_12
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5a65e71b9cfe9ac0800000000000000
+      internalID: -3846359288676783525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_13
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0d1ec3864e8614460800000000000000
+      internalID: 7224170607489638864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_14
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 415
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 46ea0a95f91e502d0800000000000000
+      internalID: -3312993876341379484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_15
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 383
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4156d9e63f683a430800000000000000
+      internalID: 3793023691267073300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_16
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 383
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22ffac2683599d040800000000000000
+      internalID: 4672930157781778210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_17
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 383
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9dabedaa7586f5e0800000000000000
+      internalID: -1876165432802824806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_18
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 383
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2c4acd9640a308660800000000000000
+      internalID: 7385967179517961410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_19
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 383
+        width: 34
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9ab874ce3f9fcd50800000000000000
+      internalID: 6759796657639439005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_20
+      rect:
+        serializedVersion: 2
+        x: 927
+        y: 383
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ea1a5a2c9f9f77c70800000000000000
+      internalID: 8968912034039439790
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 351
+        width: 97
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5f880ce18b3d9ab0800000000000000
+      internalID: -4999774582114578594
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_22
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 351
+        width: 98
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0a621a1de924c1ae0800000000000000
+      internalID: -1577312519597250912
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_23
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 351
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3800cdcb09bf3d8a0800000000000000
+      internalID: -6281400456189312893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_24
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 351
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0ddb8de7d68c3e00800000000000000
+      internalID: 1025843077095087375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_25
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 351
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f44278bf6a103c90800000000000000
+      internalID: -7192219537772493577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_26
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 351
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2bca8cd9ea26c5500800000000000000
+      internalID: 386292170158025906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_27
+      rect:
+        serializedVersion: 2
+        x: 511
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 89397edd79a78e360800000000000000
+      internalID: 7199138797033329560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_28
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ebe56b1235f70ec0800000000000000
+      internalID: -3600639781502587932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_29
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 287
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b6b591e432ba4eef0800000000000000
+      internalID: -79750725263336597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_30
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 223
+        width: 66
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f96326fcd8221940800000000000000
+      internalID: 5265315843836963319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 287
+        width: 97
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4faded0d7278317c0800000000000000
+      internalID: -4101786230526649612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_32
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 287
+        width: 98
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b22b802ac19f5320800000000000000
+      internalID: 2548916211430400694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_33
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 287
+        width: 98
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f9c6280dc5a8d1ef0800000000000000
+      internalID: -135800282511414113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_34
+      rect:
+        serializedVersion: 2
+        x: 383
+        y: 287
+        width: 98
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e841f5488309035c0800000000000000
+      internalID: -4237728676942244722
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_35
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 255
+        width: 66
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49d7e8050943e92f0800000000000000
+      internalID: -964275475779256940
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 223
+        width: 33
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc2b78a820e5ac700800000000000000
+      internalID: 561364468568142540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_37
+      rect:
+        serializedVersion: 2
+        x: 63
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b713c29ce8f43c8f0800000000000000
+      internalID: -521485657165778565
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_38
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6505f67c53501cb90800000000000000
+      internalID: -7223486598788198314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_39
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 223
+        width: 34
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff336cd573e614e60800000000000000
+      internalID: 7944752401733792767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_40
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 0
+        width: 258
+        height: 257
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 972466c0f427ad4d0800000000000000
+      internalID: -3109046908909895047
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_41
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 159
+        width: 130
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4685810ee4f6c05b0800000000000000
+      internalID: -5400819468566243228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_42
+      rect:
+        serializedVersion: 2
+        x: 959
+        y: 159
+        width: 65
+        height: 66
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26fc1c7f4d0207fb0800000000000000
+      internalID: -4652182316011892894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 193
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 448ad894ac6e7dc80800000000000000
+      internalID: -8297910031915046844
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_44
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 0
+        width: 194
+        height: 193
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 01a3447b1f1ebfbc0800000000000000
+      internalID: -3748153836577736176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_45
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 174
+        width: 34
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 893671de4ed447ad0800000000000000
+      internalID: -2705451830517210216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_46
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 97
+        width: 34
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 024188ff33664c040800000000000000
+      internalID: 4666967487379149856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_47
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 31
+        width: 130
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7049c9531433acdf0800000000000000
+      internalID: -159258481652886521
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: CaveG_RED_48
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 31
+        width: 129
+        height: 98
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b338dcfe44afd7c0800000000000000
+      internalID: -4044333281198984270
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable: {}
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
