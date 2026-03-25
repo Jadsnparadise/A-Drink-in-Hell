@@ -33,16 +33,18 @@ public class GameManager : MonoBehaviour
     {
         if (Instance != null && Instance != this)
         {
-            Destroy(gameObject);
+            Destroy(gameObject);          
             return;
         }
 
         Instance = this;
+        DontDestroyOnLoad(this);
         PlayerHealth = new Health(3);
     }
 
     private void Start()
     {
+        
         firstTimeTalkingToSatan = PlayerPrefs.GetInt("first Time", 0) != 0;
     }
 
@@ -51,8 +53,6 @@ public class GameManager : MonoBehaviour
         collectedIngredients.Clear();
 
         Debug.Log("=== NOVA RODADA ===");
-
-        SelectRandomDrink();
 
         spawner.SpawnIngredients(requiredIngredients);
     }
@@ -120,4 +120,5 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.ShowGameOver();
     }
+
 }

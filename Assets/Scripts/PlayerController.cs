@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
 
     //state flags
     public bool isTalking = false;
-    private bool isGrounded = false;
+    [SerializeField] private bool isGrounded = false;
     private bool isRunning = false;
 
     //References
@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour
 
             anim.SetBool("Walking", false);
             anim.SetBool("Running", false);
+            anim.SetBool("Jumping", false);
 
             if (_attack != null) _attack.enabled = false;
 
