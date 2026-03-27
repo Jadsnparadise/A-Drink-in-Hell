@@ -125,6 +125,11 @@ public class GameManager : MonoBehaviour
             PlayerDied();
     }
 
+    public void HealPlayer(int heal)
+    {
+        PlayerHealth.Heal(heal);
+    }
+
     private void PlayerDied()
     {
         gameOverUI.ShowGameOver();
