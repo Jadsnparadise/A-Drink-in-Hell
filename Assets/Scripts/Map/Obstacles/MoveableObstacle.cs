@@ -6,18 +6,29 @@ public class MoveableObstacle : Obstacle
     [SerializeField] private Transform endPoint;
     [SerializeField] private float duration = 2f;
 
+    public Vector2 PlatformVelocity;
+
+    private Vector3 lastPosition;
+
     void Start()
     {
+        lastPosition = transform.position;
         transform.DOMove(endPoint.position, duration)
             .SetEase(Ease.InOutSine)
             .SetLoops(-1, LoopType.Yoyo);
+    }
+
+    void FixedUpdate()
+    {
+        PlatformVelocity = (transform.position - lastPosition) / Time.fixedDeltaTime;
+        lastPosition = transform.position;
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.parent = this.transform;
+            PlayerController.Instance.currentPlatform = this;
         }
     }
 
@@ -25,7 +36,7 @@ public class MoveableObstacle : Obstacle
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            collision.transform.parent = null;
+            PlayerController.Instance.currentPlatform = null;
         }
     }
 }
