@@ -42,3 +42,24 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1Background
+    uniqueID: 813000105
+    locked: 0
+  - name: 2Rock5
+    uniqueID: 665062177
+    locked: 0
+  - name: 3Rock3
+    uniqueID: 577585005
+    locked: 0
+  - name: 4Myst
+    uniqueID: 3480129241
+    locked: 0
+  - name: Midground
+    uniqueID: 3980201411
+    locked: 0
+  - name: Player
+    uniqueID: 1024775763
+    locked: 0
+  - name: Foreground
+    uniqueID: 3417119083
+    locked: 0
