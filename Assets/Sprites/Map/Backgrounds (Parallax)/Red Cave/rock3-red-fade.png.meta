@@ -128,7 +128,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      rock3-red-fade_0: -4710801905233837530
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
