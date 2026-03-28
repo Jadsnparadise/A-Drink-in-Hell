@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -877848213
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -5659140965656977559, guid: c770e5cea5f18b842817448f75890d28, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,4 +145,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Sangue Fresco
-  ingredientSprite: {fileID: 4587759728408028549}

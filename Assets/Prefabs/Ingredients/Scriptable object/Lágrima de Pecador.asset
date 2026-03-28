@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: "L\xE1grima de Pecador"
   prefab: {fileID: 4807206673489179983, guid: 6adb212841ccc7f4f9ce48bf65663a6b, type: 3}
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 3280160512725233577, guid: 6adb212841ccc7f4f9ce48bf65663a6b, type: 3}

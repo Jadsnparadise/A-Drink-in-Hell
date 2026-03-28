@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -877848213
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -2184555504147651863, guid: fbd9904d4ef35334cbe9f99b6c421d6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,4 +145,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: Poeira Arcana
-  ingredientSprite: {fileID: 8653897914586907838}
