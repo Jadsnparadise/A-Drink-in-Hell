@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -19,12 +17,15 @@ public class PlayerController : MonoBehaviour
     public bool isTalking = false;
     [SerializeField] private bool isGrounded = false;
     private bool isRunning = false;
+    private bool isKnockBacking = false;
+    private float blinkDamageDuration = 1f;
 
     //References
     private Rigidbody2D rb;
     private Animator anim;
     private PlayerAttack attack;
     public MoveableObstacle currentPlatform;
+    private SpriteRenderer playerSprite;
 
     private void Awake()
     {
@@ -43,10 +44,13 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         attack = GetComponent<PlayerAttack>();
+        playerSprite = GetComponent<SpriteRenderer>();
     }
 
     void Update()
     {
+        if (isKnockBacking) return;
+
         if (isTalking)
         {
             rb.velocity = new Vector2(0, rb.velocity.y);
@@ -156,5 +160,48 @@ public class PlayerController : MonoBehaviour
     {
         walkSpeed *= multiplier;
         runSpeed *= multiplier;
+    }
+
+    public void ApplyKnockback(Vector2 direction, float force, float duration)
+    {
+        StartCoroutine(KnockbackRoutine(direction, force, duration));
+    }
+
+    private IEnumerator KnockbackRoutine(Vector2 direction, float force, float duration)
+    {
+        isKnockBacking = true;      
+        rb.velocity = Vector2.zero; 
+        rb.AddForce(direction * force, ForceMode2D.Impulse);
+
+        yield return new WaitForSeconds(duration);
+
+        isKnockBacking = false;
+    }
+
+    public void BlinkDamageFeedback()
+    {
+        StartCoroutine(nameof(BlinkRoutine));
+    }
+
+    private IEnumerator BlinkRoutine()
+    {
+        float elapsed = 0f;
+        float blinkInterval = 0.05f;
+        Color originalColor = playerSprite.color;
+
+        while (elapsed < blinkDamageDuration)
+        {
+            playerSprite.color = Color.red;
+            yield return new WaitForSeconds(blinkInterval);
+            elapsed += blinkInterval;
+
+            if (elapsed >= blinkDamageDuration) break;
+
+            playerSprite.color = new Color(originalColor.r, originalColor.g, originalColor.b, 0.5f);
+            yield return new WaitForSeconds(blinkInterval);
+            elapsed += blinkInterval;
+        }
+
+        playerSprite.color = originalColor;
     }
 }

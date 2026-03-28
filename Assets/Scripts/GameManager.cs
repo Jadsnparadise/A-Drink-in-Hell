@@ -129,7 +129,7 @@ public class GameManager : MonoBehaviour
     public void DamagePlayer(int damage)
     {
         PlayerHealth.TakeDamage(damage);
-
+        PlayerController.Instance.BlinkDamageFeedback();
         if (PlayerHealth.IsDead())
             PlayerDied();
     }

@@ -1,4 +1,3 @@
-using System;
 using Effects;
 using Player;
 using UnityEngine;
@@ -28,6 +27,9 @@ public class EffectSurface : MonoBehaviour
     
     [Header("Effect")]
     [SerializeField] private EffectData effectData = null;
+    [SerializeField] private float knockbackForce;
+    [SerializeField] private float knockbackDuration = 0.2f;
+    [SerializeField] private bool upwardKnockbackOnly = false;
 
     private void OnValidate()
     {
@@ -56,7 +58,7 @@ public class EffectSurface : MonoBehaviour
         switch (effectType)
         {
             case EffectType.Damage:
-                ApplyDamage();
+                ApplyDamage(player);
                 break;
             case EffectType.Teleport:
                 ApplyTeleport(player);
@@ -69,13 +71,34 @@ public class EffectSurface : MonoBehaviour
         }
     }
 
-    private void ApplyDamage()
+    private void ApplyDamage(Transform player)
     {
         if (damageCooldown == 0 && _lastTimeDamage != 0) return;
         if (Time.time < _lastTimeDamage + damageCooldown) return;
         
         GameManager.Instance.DamagePlayer(damage);
+        KnockBack(player);
         _lastTimeDamage = Time.time;
+    }
+
+    private void KnockBack(Transform player)
+    {
+        if (knockbackForce <= 0) return;
+
+        Vector2 knockbackDirection;
+
+        if (upwardKnockbackOnly)
+        {
+            knockbackDirection = Vector2.up;
+        }
+        else
+        {
+            knockbackDirection = (transform.position - player.position).normalized; //pego o vetor direção do objeto ao player pra aplicar knockback
+            knockbackDirection.y = 0.5f; //fazer ele sair um pouco do chão pra o atrito não bugar o knockback
+            knockbackDirection.Normalize();
+        }
+
+        PlayerController.Instance.ApplyKnockback(knockbackDirection, knockbackForce, knockbackDuration);
     }
 
     private void ApplyTeleport(Transform player)
