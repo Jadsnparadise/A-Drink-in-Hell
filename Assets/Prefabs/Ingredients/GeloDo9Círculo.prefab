@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -877848213
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: -6644516621610019334, guid: 847d45069312e404fbababce7537a4a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,4 +145,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "Gelo do 9\xBA C\xEDrculo"
-  ingredientSprite: {fileID: 6216010959639132626}

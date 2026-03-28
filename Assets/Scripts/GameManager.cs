@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -30,6 +31,9 @@ public class GameManager : MonoBehaviour
     [Header("Panels")]
     [SerializeField] private GameOverUI gameOverUI;
 
+    public event Action<List<IngredientData>> OnIngredientsGenerated;
+    public event Action<string> OnIngredientCollected;
+
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -56,6 +60,7 @@ public class GameManager : MonoBehaviour
         Debug.Log("=== NOVA RODADA ===");
 
         spawner.SpawnIngredients(requiredIngredients);
+        OnIngredientsGenerated?.Invoke(requiredIngredients);
     }
 
     public void SelectRandomDrink()
@@ -66,7 +71,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        int randomIndex = Random.Range(0, drinks.Count);
+        int randomIndex = UnityEngine.Random.Range(0, drinks.Count);
         currentDrink = drinks[randomIndex];
 
         requiredIngredients.Clear();
@@ -94,6 +99,10 @@ public class GameManager : MonoBehaviour
                 collectedIngredients.Add(requiredIngredient);
 
                 Debug.Log("Coletou: " + ingredient);
+
+                SfxManager.Instance.GetcollectedIngredientAudio().Play();
+
+                OnIngredientCollected?.Invoke(ingredient);
 
                 CheckWin();
                 break;

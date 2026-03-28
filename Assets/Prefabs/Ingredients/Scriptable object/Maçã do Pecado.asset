@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ingredientName: "Ma\xE7\xE3 do Pecado"
   prefab: {fileID: 3552687077401283223, guid: a4ce0ce4297e4414eb90f1d77b277fc5, type: 3}
-  ingredientSprite: {fileID: 0}
+  ingredientSprite: {fileID: 1378498426919637637, guid: a4ce0ce4297e4414eb90f1d77b277fc5, type: 3}
