@@ -33,10 +33,10 @@ public class EffectSurface : MonoBehaviour
     private void OnCollisionStay2D(Collision2D other)
     {
         if (other.gameObject.CompareTag("Player"))
-            ApplyEffect(other);
+            ApplyEffect(other.transform);
     }
 
-    private void ApplyEffect(Collision2D player)
+    private void ApplyEffect(Transform player)
     {
         switch (effectType)
         {
@@ -60,7 +60,7 @@ public class EffectSurface : MonoBehaviour
         _lastTimeDamage = Time.time;
     }
 
-    private void ApplyTeleport(Collision2D player)
+    private void ApplyTeleport(Transform player)
     {
         var target = teleport != null ? teleport : player.transform;
         var displacement = teleportDistance > 0 ? Random.Range(-teleportDistance, teleportDistance) : 0;
@@ -68,6 +68,6 @@ public class EffectSurface : MonoBehaviour
         var position = target.position;
         position.x += displacement;
         
-        player.gameObject.transform.position = position;
+        player.position = position;
     }
 }

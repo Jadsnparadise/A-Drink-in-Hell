@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public static PlayerController Instance;
+
     [Header("Horizontal Movement Settings")]
     //Movement
     [SerializeField] private float walkSpeed = 1f;
@@ -19,11 +21,10 @@ public class PlayerController : MonoBehaviour
     private bool isRunning = false;
 
     //References
-    Rigidbody2D rb;
-    Animator anim;
-    PlayerAttack _attack;
-
-    public static PlayerController Instance;
+    private Rigidbody2D rb;
+    private Animator anim;
+    private PlayerAttack attack;
+    public MoveableObstacle currentPlatform;
 
     private void Awake()
     {
@@ -41,7 +42,7 @@ public class PlayerController : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        _attack = GetComponent<PlayerAttack>();
+        attack = GetComponent<PlayerAttack>();
     }
 
     void Update()
@@ -54,15 +55,15 @@ public class PlayerController : MonoBehaviour
             anim.SetBool("Running", false);
             anim.SetBool("Jumping", false);
 
-            if (_attack != null) _attack.enabled = false;
+            if (attack != null) attack.enabled = false;
 
             return;
         }
         else{
-            _attack.enabled = true;
+            attack.enabled = true;
         }
 
-        if (_attack != null && _attack.IsAttacking())
+        if (attack != null && attack.IsAttacking())
         {
             rb.velocity = Vector2.zero;
             return;
@@ -137,10 +138,16 @@ public class PlayerController : MonoBehaviour
     void Move()
     {
         var speed = isRunning ? runSpeed : walkSpeed;
-        
-        rb.velocity = new Vector2(speed * xAxis, rb.velocity.y);
 
-        var moving = rb.velocity.x != 0 && isGrounded;
+        float platformVelocityX = 0f;
+        if (currentPlatform != null)
+        {
+            platformVelocityX = currentPlatform.PlatformVelocity.x;
+        }
+
+        rb.velocity = new Vector2((speed * xAxis) + platformVelocityX, rb.velocity.y);
+
+        var moving = xAxis != 0 && isGrounded; 
         anim.SetBool("Walking", moving);
         anim.SetBool("Running", moving && isRunning);
     }
