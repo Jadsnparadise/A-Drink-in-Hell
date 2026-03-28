@@ -134,5 +134,4 @@ public class GameManager : MonoBehaviour
     {
         gameOverUI.ShowGameOver();
     }
-
 }

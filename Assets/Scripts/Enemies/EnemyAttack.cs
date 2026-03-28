@@ -1,49 +1,63 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class EnemyAttack : MonoBehaviour
+namespace Enemies
 {
-    [SerializeField] private float attackCooldown = 1.5f;
-    [SerializeField] private Collider2D attackZone;
-
-    private EnemySensor _sensor;
-    private float _lastAttack;
-
-    private void Awake()
+    public class EnemyAttack : MonoBehaviour
     {
-        _sensor = GetComponentInChildren<EnemySensor>();
-        attackZone.enabled = false;
-    }
+        [Header("Stats")]
+        [SerializeField] private int damage;
+        [SerializeField] private float attackCooldown;
+        [SerializeField] private bool runningAwayAfterAttacking = false;
+        [SerializeField] private float timeBeforeRunningAway = 0.2f;
 
-    void Update()
-    {
-        if (!_sensor.PlayerDetected || !PlayerInFront()) return;
-        if (Time.time > _lastAttack + attackCooldown)
-            Attack();
-    }
+        [Header("References")]
+        [SerializeField] private Collider2D hitboxCollider;
 
-    private void Attack()
-    {
-        _lastAttack = Time.time;
-        
-        GetComponent<DemonFrog>().TriggerAttackAnimation();
-        
-        attackZone.enabled = true;
-        Invoke(nameof(DisableAttack), 0.2f);
-    }
+        protected EnemyMovement Movement;
+        protected float LastAttackTime;
 
-    private void DisableAttack()
-    {
-        attackZone.enabled = false;
-    }
+        protected virtual void Awake()
+        {
+            Movement = GetComponentInParent<EnemyMovement>();
 
-    private bool PlayerInFront()
-    {
-        float direction = transform.localScale.x;
-        float playerDir = _sensor.player.position.x - transform.position.x;
+            LastAttackTime = 0f;
+        }
 
-        return Mathf.Sign(playerDir) == Mathf.Sign(direction);
+        protected virtual void Update()
+        {
+            var player = GetPlayerCollider();
+            if (player && CanAttack()) PerformAttack();
+        }
+
+        protected virtual Collider2D GetPlayerCollider()
+        {
+            List<Collider2D> colliders = new();
+            var filter = new ContactFilter2D() { useTriggers = false };
+            Physics2D.OverlapCollider(hitboxCollider, filter, colliders);
+
+            return colliders.FirstOrDefault(col => col.CompareTag("Player"));
+        }
+
+        protected virtual bool CanAttack()
+        {
+            return LastAttackTime + attackCooldown <= Time.time;
+        }
+
+        protected virtual void PerformAttack()
+        {
+            GameManager.Instance.DamagePlayer(damage);
+            LastAttackTime = Time.time;
+            if (runningAwayAfterAttacking)
+                StartCoroutine(ActiveRunningAway());
+        }
+
+        protected virtual IEnumerator ActiveRunningAway()
+        {
+            yield return new WaitForSeconds(timeBeforeRunningAway);
+            Movement.SetRunningAway();
+        }
     }
 }

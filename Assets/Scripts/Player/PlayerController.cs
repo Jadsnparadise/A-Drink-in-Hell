@@ -157,9 +157,4 @@ public class PlayerController : MonoBehaviour
         walkSpeed *= multiplier;
         runSpeed *= multiplier;
     }
-
-    public void MultiplyScale(float multiplier)
-    {
-        transform.localScale *= multiplier;
-    }
 }

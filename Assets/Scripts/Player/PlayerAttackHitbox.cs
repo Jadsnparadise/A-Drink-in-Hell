@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Enemies;
 using UnityEngine;
 
 public class PlayerAttackHitbox : MonoBehaviour
@@ -9,8 +10,7 @@ public class PlayerAttackHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Enemy enemy = other.GetComponent<Enemy>();
-        if (enemy != null)
+        if (other.TryGetComponent<EnemyController>(out var enemy))
             enemy.TakeDamage(damage);
     }
 }

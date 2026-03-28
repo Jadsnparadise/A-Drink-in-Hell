@@ -1,0 +1,175 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3658099335855263358
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: attackCooldown
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 13.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Name
+      value: Demon Frog Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: jumpForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: runningAwaySpeed
+      value: 0.8
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 2146664180029367380, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+    - {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+    - {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4725034374071528169}
+    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1974524127709070253}
+    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 4954785765845223796}
+    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3156677643169345448}
+  m_SourcePrefab: {fileID: 100100000, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+--- !u!1 &2201528110215230572 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+  m_PrefabInstance: {fileID: 3658099335855263358}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &4725034374071528169
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201528110215230572}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: afdde357beafc7afe892660d3e2c7de3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1974524127709070253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201528110215230572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39c67a20331b47c7baf72816e9372422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 3
+  damageCooldown: 1
+--- !u!114 &4954785765845223796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201528110215230572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9183415d001a4fecaad90b8b1d7c21e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDistanceToPlayer: 0.25
+  speed: 1
+  maxDistance: 1
+  chasingSpeed: 1.2
+  chasingMaxDistance: 1.5
+  runningAwaySpeed: 0.8
+  runningAwayMaxDistance: 1
+  jumpForce: 5
+  jumpCooldown: 5
+  jumpProbability: 0.1
+--- !u!114 &3156677643169345448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2201528110215230572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e26dc921b6194dd9bd11fff31d7fcb73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 1
+  attackCooldown: 2
+  runningAwayAfterAttacking: 1
+  timeBeforeRunningAway: 0.75
+  hitboxCollider: {fileID: 4461985184300549287}
+--- !u!58 &4461985184300549287 stripped
+CircleCollider2D:
+  m_CorrespondingSourceObject: {fileID: 1092133992900365017, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+  m_PrefabInstance: {fileID: 3658099335855263358}
+  m_PrefabAsset: {fileID: 0}
