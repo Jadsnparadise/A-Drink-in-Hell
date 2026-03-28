@@ -1,3 +1,6 @@
+using System;
+using Effects;
+using Player;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -7,7 +10,8 @@ public class EffectSurface : MonoBehaviour
     private enum EffectType
     {
         Damage,
-        Teleport
+        Teleport,
+        SpecialEffect
     }
     
     [Header("Effects")]
@@ -21,6 +25,9 @@ public class EffectSurface : MonoBehaviour
     [Header("Teleport")]
     [SerializeField] private Transform teleport = null;
     [SerializeField] private float teleportDistance = 0;
+    
+    [Header("Effect")]
+    [SerializeField] private EffectData effectData = null;
 
     private void OnValidate()
     {
@@ -28,9 +35,17 @@ public class EffectSurface : MonoBehaviour
         {
             Debug.LogError($"{nameof(effectType)} is not defined");
         }
+
+        if (effectType == EffectType.SpecialEffect && effectData == null)
+        {
+            Debug.LogError($"{nameof(effectData)} is not defined");
+        }
     }
 
-    private void OnCollisionStay2D(Collision2D other)
+    private void OnCollisionStay2D(Collision2D other) => HandleContact(other.collider);
+    private void OnTriggerStay2D(Collider2D other) => HandleContact(other);
+
+    private void HandleContact(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player"))
             ApplyEffect(other.transform);
@@ -45,6 +60,9 @@ public class EffectSurface : MonoBehaviour
                 break;
             case EffectType.Teleport:
                 ApplyTeleport(player);
+                break;
+            case EffectType.SpecialEffect:
+                ApplySpecialEffect(player);
                 break;
             default:
                 break;
@@ -69,5 +87,13 @@ public class EffectSurface : MonoBehaviour
         position.x += displacement;
         
         player.position = position;
+    }
+
+    private void ApplySpecialEffect(Transform player)
+    {
+        if (effectData == null) return;
+        var effect = effectData.CreateEffect();
+        if (!player.TryGetComponent<PlayerEffectController>(out var controller)) return;
+        controller.ApplyEffect(effect);
     }
 }

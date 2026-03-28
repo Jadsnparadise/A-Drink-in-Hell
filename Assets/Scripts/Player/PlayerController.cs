@@ -151,4 +151,15 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("Walking", moving);
         anim.SetBool("Running", moving && isRunning);
     }
+
+    public void MultiplySpeed(float multiplier)
+    {
+        walkSpeed *= multiplier;
+        runSpeed *= multiplier;
+    }
+
+    public void MultiplyScale(float multiplier)
+    {
+        transform.localScale *= multiplier;
+    }
 }

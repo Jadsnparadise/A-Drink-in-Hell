@@ -97,6 +97,7 @@ GameObject:
   - component: {fileID: 8565035140813472718}
   - component: {fileID: 537667742409269416}
   - component: {fileID: 8201878913264694225}
+  - component: {fileID: 568701712330907810}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -260,6 +261,9 @@ MonoBehaviour:
   walkSpeed: 2
   runSpeed: 3
   jumpForce: 9.5
+  isTalking: 0
+  isGrounded: 0
+  currentPlatform: {fileID: 0}
 --- !u!95 &537667742409269416
 Animator:
   serializedVersion: 7
@@ -297,3 +301,15 @@ MonoBehaviour:
   animator: {fileID: 537667742409269416}
   attackCooldown: 0.5
   attackCollider: {fileID: 3287621712410568472}
+--- !u!114 &568701712330907810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6284044151928747826}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7fac687d92a54c0095ff845809e8483c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
