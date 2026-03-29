@@ -4,6 +4,9 @@ namespace Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
+        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
+        private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+
         protected enum MovementState
         {
             Patrolling,
@@ -37,11 +40,13 @@ namespace Enemies
         protected MovementState State;
         protected PlayerSensor PlayerSensor;
         protected Rigidbody2D RigidBody;
+        protected Animator Animator;
         
         protected virtual void Awake()
         {
             PlayerSensor = GetComponentInChildren<PlayerSensor>();
             RigidBody = GetComponentInParent<Rigidbody2D>();
+            Animator = GetComponentInParent<Animator>();
             
             RightLimit = transform.position;
             RightLimit.x += maxDistance;
@@ -70,6 +75,11 @@ namespace Enemies
             positionX += ToRight ? runningAwayMaxDistance : -runningAwayMaxDistance;
             RunningAwayLimit = new Vector3(positionX, positionY, positionZ);
         }
+        
+        protected void Update()
+        {
+            UpdateAnimation();
+        }
 
         protected virtual void FixedUpdate()
         {
@@ -93,7 +103,7 @@ namespace Enemies
         
         protected virtual void UpdateState()
         {
-            if (RigidBody != null)
+            if (RigidBody)
                 RigidBody.velocity = new Vector2(0f, RigidBody.velocity.y);
 
             switch (State)
@@ -120,14 +130,14 @@ namespace Enemies
 
         protected virtual void PatrolCheckPlayerSensor()
         {
-            if (PlayerSensor.Collider == null) return;
+            if (!PlayerSensor.Collider) return;
             if (IsFacingPlayer(PlayerSensor.Collider.transform))
                 State = MovementState.Chasing;
         }
 
         protected virtual void ChasingCheckPlayerSensor()
         {
-            if (PlayerSensor.Collider == null) 
+            if (!PlayerSensor.Collider) 
                 State = MovementState.Patrolling;
         }
 
@@ -193,7 +203,7 @@ namespace Enemies
             ToRight = !ToRight;
             Flip();
                 
-            State = PlayerSensor.Collider != null ? MovementState.Chasing : MovementState.Patrolling;
+            State = PlayerSensor.Collider ? MovementState.Chasing : MovementState.Patrolling;
         }
 
         protected virtual void Flip()
@@ -206,7 +216,7 @@ namespace Enemies
 
         protected virtual void MoveForward()
         {
-            if (RigidBody == null) return;
+            if (!RigidBody) return;
 
             var currSpeed = State switch
             {
@@ -221,9 +231,8 @@ namespace Enemies
 
         public virtual void Jump()
         {
-            if (RigidBody != null && IsGrounded)
+            if (RigidBody && IsGrounded)
             {
-                // Zera a velocidade Y antes do pulo para evitar pulos acumulados
                 RigidBody.velocity = new Vector2(RigidBody.velocity.x, 0f);
                 RigidBody.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
                 IsGrounded = false;
@@ -234,19 +243,27 @@ namespace Enemies
         {
             IsGrounded = false;
 
-            foreach (ContactPoint2D contactPoint in collision.contacts)
+            foreach (var contactPoint in collision.contacts)
             {
-                if (contactPoint.normal.y > 0.5f)
-                {
-                    IsGrounded = true;
-                    break;
-                }
+                if (!(contactPoint.normal.y > 0.5f)) continue;
+                IsGrounded = true;
+                break;
             }
         }
 
         protected virtual void OnCollisionExit2D(Collision2D collision)
         {
             IsGrounded = false;
+        }
+        
+        protected void UpdateAnimation()
+        {
+            if (!Animator || !RigidBody) return;
+
+            var isWalking = Mathf.Abs(RigidBody.velocity.x) > 0.1f;
+            
+            Animator.SetBool(IsWalking, isWalking);
+            Animator.SetBool(IsJumping, !IsGrounded);
         }
     }
 }

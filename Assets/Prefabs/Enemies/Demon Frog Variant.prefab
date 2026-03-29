@@ -10,7 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: attackCooldown
-      value: 2
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: timeBeforeRunningAway
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -71,7 +75,6 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 2146664180029367380, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
     - {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-    - {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
@@ -84,9 +87,6 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 4954785765845223796}
-    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 3156677643169345448}
   m_SourcePrefab: {fileID: 100100000, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
 --- !u!1 &2201528110215230572 stripped
 GameObject:
@@ -151,25 +151,3 @@ MonoBehaviour:
   jumpForce: 5
   jumpCooldown: 5
   jumpProbability: 0.1
---- !u!114 &3156677643169345448
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2201528110215230572}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e26dc921b6194dd9bd11fff31d7fcb73, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  attackCooldown: 2
-  runningAwayAfterAttacking: 1
-  timeBeforeRunningAway: 0.75
-  hitboxCollider: {fileID: 4461985184300549287}
---- !u!58 &4461985184300549287 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1092133992900365017, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-  m_PrefabInstance: {fileID: 3658099335855263358}
-  m_PrefabAsset: {fileID: 0}

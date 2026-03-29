@@ -7,6 +7,8 @@ namespace Enemies
 {
     public class EnemyAttack : MonoBehaviour
     {
+        private static readonly int Attack = Animator.StringToHash("Attack");
+
         [Header("Stats")]
         [SerializeField] private int damage;
         [SerializeField] private float attackCooldown;
@@ -17,12 +19,13 @@ namespace Enemies
         [SerializeField] private Collider2D hitboxCollider;
 
         protected EnemyMovement Movement;
+        protected Animator Animator;
         protected float LastAttackTime;
 
         protected virtual void Awake()
         {
             Movement = GetComponentInParent<EnemyMovement>();
-
+            Animator = GetComponentInParent<Animator>();
             LastAttackTime = 0f;
         }
 
@@ -48,6 +51,8 @@ namespace Enemies
 
         protected virtual void PerformAttack()
         {
+            if (Animator) Animator.SetTrigger(Attack);
+            
             GameManager.Instance.DamagePlayer(damage);
             LastAttackTime = Time.time;
             if (runningAwayAfterAttacking)
