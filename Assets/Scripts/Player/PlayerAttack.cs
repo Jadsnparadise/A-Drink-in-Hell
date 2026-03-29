@@ -54,6 +54,8 @@ public class PlayerAttack : MonoBehaviour
 
     public bool IsAttacking()
     {
+        if (_isAttacking && Time.time >= _lastAttackTime + cooldown)
+            _isAttacking = false;
         return _isAttacking;
     }
 

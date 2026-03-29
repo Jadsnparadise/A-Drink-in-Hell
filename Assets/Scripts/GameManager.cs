@@ -139,6 +139,11 @@ public class GameManager : MonoBehaviour
         PlayerHealth.Heal(heal);
     }
 
+    public void RevivePlayer()
+    {
+        PlayerHealth.FullHeal();
+    }
+
     private void PlayerDied()
     {
         gameOverUI.ShowGameOver();

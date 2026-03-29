@@ -17,15 +17,17 @@ public class Health
         
         Current -= damage;
         Current = Mathf.Max(Current, 0);
-        
-        Debug.Log($"DAMAGE: Vida atual: {Current}/{Max}");
     }
 
     public void Heal(int healAmount)
     {
         Current += healAmount;
         Current = Mathf.Clamp(Current, 0, Max);
-        Debug.Log($"CURA: Vida atual: {Current}/{Max}");
+    }
+
+    public void FullHeal()
+    {
+        Current = Max;
     }
 
     public bool IsDead() => Current <= 0;

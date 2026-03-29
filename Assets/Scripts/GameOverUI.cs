@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
-    
     [SerializeField] private GameObject panel;
-    private bool _gameover = false;
+    private bool _gameOver = false;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if (_gameover && Input.anyKeyDown)
+        if (_gameOver && Input.anyKeyDown)
         {
             Restart();
         }
@@ -20,12 +18,13 @@ public class GameOverUI : MonoBehaviour
 
     public void ShowGameOver()
     {
-        _gameover = true;
+        _gameOver = true;
         panel.SetActive(true);
     }
 
-    void Restart()
+    private static void Restart()
     {
+        GameManager.Instance.RevivePlayer();
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
