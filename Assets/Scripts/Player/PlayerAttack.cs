@@ -56,6 +56,11 @@ public class PlayerAttack : MonoBehaviour
     {
         return _isAttacking;
     }
+
+    public void EndAttack()
+    {
+        _isAttacking = false;
+    }
     
     private Collider2D GetEnemyCollider()
     {
