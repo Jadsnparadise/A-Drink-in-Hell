@@ -45,13 +45,13 @@ TagManager:
   - name: 1Background
     uniqueID: 813000105
     locked: 0
-  - name: 2Rock5
+  - name: 2
     uniqueID: 665062177
     locked: 0
-  - name: 3Rock3
+  - name: 3
     uniqueID: 577585005
     locked: 0
-  - name: 4Myst
+  - name: 4
     uniqueID: 3480129241
     locked: 0
   - name: Midground
