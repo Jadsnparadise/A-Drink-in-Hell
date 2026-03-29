@@ -21,11 +21,11 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: -1808982527863717971, guid: 775dad13d1086128db8cbd7f3a87ecd5, type: 3}
-    - time: 0.25
-      value: {fileID: 8115644005664255767, guid: 00f685abe36087c8cabadc5a614d8eb8, type: 3}
-    - time: 0.5
-      value: {fileID: -1974267942269126528, guid: 40a81b2fa9b24bebba16ae674434f6bb, type: 3}
+      value: {fileID: 2484136879009152051, guid: 7c41d2006c45b214e99a802e1169a1c2, type: 3}
+    - time: 0.083333336
+      value: {fileID: 204436472612058064, guid: 2e111a7fff4f5274fa85336d9e632e8e, type: 3}
+    - time: 0.16666667
+      value: {fileID: -116935431360576598, guid: a1ba38ca63ada7f4ea530771097c3aa5, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
@@ -48,15 +48,15 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: -1808982527863717971, guid: 775dad13d1086128db8cbd7f3a87ecd5, type: 3}
-    - {fileID: 8115644005664255767, guid: 00f685abe36087c8cabadc5a614d8eb8, type: 3}
-    - {fileID: -1974267942269126528, guid: 40a81b2fa9b24bebba16ae674434f6bb, type: 3}
+    - {fileID: 2484136879009152051, guid: 7c41d2006c45b214e99a802e1169a1c2, type: 3}
+    - {fileID: 204436472612058064, guid: 2e111a7fff4f5274fa85336d9e632e8e, type: 3}
+    - {fileID: -116935431360576598, guid: a1ba38ca63ada7f4ea530771097c3aa5, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 0.51666665
+    m_StopTime: 0.25
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
@@ -76,7 +76,21 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events:
-  - time: 0.5
+  - time: 0.083333336
+    functionName: PerformAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
+    functionName: EndAttack
+    data: 
+    objectReferenceParameter: {fileID: 0}
+    floatParameter: 0
+    intParameter: 0
+    messageOptions: 0
+  - time: 0.25
     functionName: EndAttack
     data: 
     objectReferenceParameter: {fileID: 0}
