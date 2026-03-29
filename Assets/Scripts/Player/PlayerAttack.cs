@@ -52,11 +52,6 @@ public class PlayerAttack : MonoBehaviour
         enemy.TakeDamage(damage);
     }
 
-    public void EndAttack()
-    {
-        _isAttacking = false;
-    }
-
     public bool IsAttacking()
     {
         return _isAttacking;

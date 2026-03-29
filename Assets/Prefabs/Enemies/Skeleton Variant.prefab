@@ -116,6 +116,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Skeleton Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.20992398
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.4370557
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.010038018
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.011472166
+      objectReference: {fileID: 0}
     - target: {fileID: 4893842590863410500, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Radius
       value: 0.5

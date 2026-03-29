@@ -11,12 +11,13 @@ namespace Enemies.Skeleton
         {
             var player = GetPlayerCollider();
             if (!player || !CanAttack()) return;
+            
+            LastAttackTime = Time.time; 
             StartCoroutine(PerformAttackCoroutine());
         }
 
         private IEnumerator PerformAttackCoroutine()
         {
-            LastAttackTime = Time.time;
             if (Animator) Animator.SetTrigger(Attack);
             yield return WaitForSeconds03;
             PerformAttack();
