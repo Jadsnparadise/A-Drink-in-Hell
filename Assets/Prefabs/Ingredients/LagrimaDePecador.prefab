@@ -72,8 +72,8 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -877848213
+  m_SortingLayer: 7
   m_SortingOrder: 0
   m_Sprite: {fileID: 8058131008373761412, guid: ad4786b6749577c4c8593333509fd49f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -145,4 +145,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredientName: "L\xE1grima de Pecador"
-  ingredientSprite: {fileID: 3280160512725233577}

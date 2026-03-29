@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &1241116804034321171
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 11.239669
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04000467
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3260878982706099522, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595865290733147882, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_Size.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595865290733147882, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_Size.y
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595865290733147882, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 87f7c017264f053f18f5a1088f7ca738, type: 3}
+    - target: {fileID: 4595865290733147882, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7176897553592258200, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: effectData
+      value: 
+      objectReference: {fileID: 11400000, guid: 0d679843ae400fe22a56c2608fec7bcc, type: 2}
+    - target: {fileID: 8337539013570091450, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
+      propertyPath: m_Name
+      value: Full Heal Pickup Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 65286b0338daa5c6ebb741944c3ce2e5, type: 3}
