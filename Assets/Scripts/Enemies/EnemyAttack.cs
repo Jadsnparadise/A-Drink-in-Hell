@@ -7,16 +7,16 @@ namespace Enemies
 {
     public class EnemyAttack : MonoBehaviour
     {
-        private static readonly int Attack = Animator.StringToHash("Attack");
+        protected static readonly int Attack = Animator.StringToHash("Attack");
 
         [Header("Stats")]
-        [SerializeField] private int damage;
-        [SerializeField] private float attackCooldown;
-        [SerializeField] private bool runningAwayAfterAttacking = false;
-        [SerializeField] private float timeBeforeRunningAway = 0.2f;
+        [SerializeField] protected int damage;
+        [SerializeField] protected float attackCooldown;
+        [SerializeField] protected bool runningAwayAfterAttacking = false;
+        [SerializeField] protected float timeBeforeRunningAway = 0.2f;
 
         [Header("References")]
-        [SerializeField] private Collider2D hitboxCollider;
+        public Collider2D hitboxCollider;
 
         protected EnemyMovement Movement;
         protected Animator Animator;
@@ -32,7 +32,9 @@ namespace Enemies
         protected virtual void Update()
         {
             var player = GetPlayerCollider();
-            if (player && CanAttack()) PerformAttack();
+            if (!player || !CanAttack()) return;
+            if (Animator) Animator.SetTrigger(Attack);
+            PerformAttack();
         }
 
         protected virtual Collider2D GetPlayerCollider()
@@ -51,8 +53,6 @@ namespace Enemies
 
         protected virtual void PerformAttack()
         {
-            if (Animator) Animator.SetTrigger(Attack);
-            
             GameManager.Instance.DamagePlayer(damage);
             LastAttackTime = Time.time;
             if (runningAwayAfterAttacking)

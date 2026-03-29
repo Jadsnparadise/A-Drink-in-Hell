@@ -77,9 +77,6 @@ public class PlayerController : MonoBehaviour
         Move();
         Jump();
         Flip();
-        
-        if (Input.GetKeyDown(KeyCode.H))
-            GameManager.Instance.DamagePlayer(1);
     }
 
     void GetInputs()

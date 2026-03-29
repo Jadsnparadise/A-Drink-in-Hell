@@ -9,7 +9,7 @@ namespace Effects.Darkness
         private readonly float _radius;
         private Light2D _globalLight = null;
         private Light2D _playerLight = null;
-        
+
         public DarknessEffect(float duration, float radius) : base(duration)
         {
             _radius = radius;
@@ -57,7 +57,7 @@ namespace Effects.Darkness
             controller.StartCoroutine(ChangeLightIntensity(1f, _playerLight));
             _playerLight.color = Color.white;
         }
-        
+
         private IEnumerator ChangeLightIntensity(float targetIntensity, Light2D light)
         {
             var velocity = 0f;
@@ -71,7 +71,7 @@ namespace Effects.Darkness
                 );
                 yield return null;
             }
-            
+
             light.intensity = targetIntensity;
         }
 
@@ -81,6 +81,5 @@ namespace Effects.Darkness
             yield return new WaitForSeconds(0.5f);
             Object.Destroy(_playerLight.gameObject);
         }
-        
     }
 }

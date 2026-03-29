@@ -10,7 +10,8 @@ public class PlayerAttackHitbox : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.TryGetComponent<EnemyController>(out var enemy))
-            enemy.TakeDamage(damage);
+        if (!other.CompareTag("Enemy")) return;
+        var enemy = other.GetComponent<EnemyController>(); 
+        enemy.TakeDamage(damage);
     }
 }

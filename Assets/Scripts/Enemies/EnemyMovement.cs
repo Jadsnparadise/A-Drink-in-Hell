@@ -4,8 +4,8 @@ namespace Enemies
 {
     public class EnemyMovement : MonoBehaviour
     {
-        private static readonly int IsWalking = Animator.StringToHash("IsWalking");
-        private static readonly int IsJumping = Animator.StringToHash("IsJumping");
+        protected static readonly int IsWalking = Animator.StringToHash("IsWalking");
+        protected static readonly int IsJumping = Animator.StringToHash("IsJumping");
 
         protected enum MovementState
         {
@@ -15,22 +15,22 @@ namespace Enemies
         }
         
         [Header("Movement Settings")]
-        [SerializeField] private float minDistanceToPlayer;
+        [SerializeField] protected float minDistanceToPlayer;
         
         [Header("Patrol Stats")]
-        [SerializeField] private float speed;
-        [SerializeField] private float maxDistance;
+        [SerializeField] protected float speed;
+        [SerializeField] protected float maxDistance;
         
         [Header("Chasing Stats")]
-        [SerializeField] private float chasingSpeed;
-        [SerializeField] private float chasingMaxDistance;
+        [SerializeField] protected float chasingSpeed;
+        [SerializeField] protected float chasingMaxDistance;
         
         [Header("Running Away Stats")]
-        [SerializeField] private float runningAwaySpeed;
-        [SerializeField] private float runningAwayMaxDistance;
+        [SerializeField] protected float runningAwaySpeed;
+        [SerializeField] protected float runningAwayMaxDistance;
         
         [Header("Jumping Stats")]
-        [SerializeField] private float jumpForce;
+        [SerializeField] protected float jumpForce;
 
         protected Vector3 RightLimit, LeftLimit;
         protected Vector3 ChasingRightLimit, ChasingLeftLimit;

@@ -13,6 +13,7 @@ namespace Enemies
         protected Health Health;
         protected float LastDamageTime;
         protected SpriteRenderer SpriteRenderer;
+        protected EnemyAttack Attacker;
         
         private bool _isDead = false;
 
@@ -20,7 +21,8 @@ namespace Enemies
         {
             Health = new Health(maxHealth);
             LastDamageTime = 0;
-            SpriteRenderer = GetComponent<SpriteRenderer>();
+            SpriteRenderer = GetComponentInParent<SpriteRenderer>();
+            Attacker = GetComponentInParent<EnemyAttack>();
         }
 
         public virtual void TakeDamage(int amount)
@@ -41,12 +43,13 @@ namespace Enemies
 
         protected virtual void Die()
         {
+            Attacker.hitboxCollider.enabled = false;
             if (!_isDead)
                 StartCoroutine(DieRoutine());
             _isDead = true;
         }
 
-        private IEnumerator DieRoutine()
+        protected virtual IEnumerator DieRoutine()
         {
             yield return StartCoroutine(DieAnimation());
             Destroy(gameObject);
