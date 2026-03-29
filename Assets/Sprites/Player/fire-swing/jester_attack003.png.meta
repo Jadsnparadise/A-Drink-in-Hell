@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 84623b1524659bee6b1f8a70dcd7de4b
+guid: a1ba38ca63ada7f4ea530771097c3aa5
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8115644005664255767
-    second: frame_001_0
+      213: -116935431360576598
+    second: jester_attack003_0
+  - first:
+      213: 3556663842497510687
+    second: jester_attack003_1
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -75,7 +78,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -98,13 +101,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: frame_001_0
+      name: jester_attack003_0
       rect:
         serializedVersion: 2
-        x: 8
-        y: 6
-        width: 40
-        height: 42
+        x: 0
+        y: 10
+        width: 58
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 71f6521893f80a070800000000000000
-      internalID: 8115644005664255767
+      spriteID: aa3881048df806ef0800000000000000
+      internalID: -116935431360576598
       vertices: []
       indices: 
       edges: []
@@ -121,7 +124,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 75afea5a95092e48d9cbf5baba409b41
+    spriteID: 9641b00afcb22ff429ab4700b03f0ecc
     internalID: 0
     vertices: []
     indices: 
@@ -129,7 +132,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      frame_001_0: 8115644005664255767
+      jester_attack003_0: -116935431360576598
+      jester_attack003_1: 3556663842497510687
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

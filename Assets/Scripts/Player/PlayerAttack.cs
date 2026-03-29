@@ -41,7 +41,8 @@ public class PlayerAttack : MonoBehaviour
         _animator.SetTrigger(Attack1);
         _lastAttackTime = Time.time;
 
-        PerformAttack();
+        //PerformAttack();
+        //(Agora a animação é responsável por chamar o método PerformAttack através de um evento de animação)
     }
 
     private void PerformAttack()
