@@ -15,10 +15,11 @@ public class MusicManager : MonoBehaviour
 
     [SerializeField] private float maxVolume = 0.25f;
 
+    [SerializeField] private bool crossFade;
+
     private AudioSource currentSource;
     private AudioSource nextSource;
 
-    private AudioClip currentLevelClip;
     private AudioClip currentClip;
     private AudioClip nextClip;
 
@@ -55,9 +56,9 @@ public class MusicManager : MonoBehaviour
 
         Debug.Log("Próxima música: " + clip.name);
 
-        if (crossfadeRoutine != null)
-        {
-            StopCoroutine(crossfadeRoutine);
+        
+        if (crossfadeRoutine != null) { 
+            StopCoroutine(crossfadeRoutine); 
         }
 
         crossfadeRoutine = StartCoroutine(WaitForLoopThenCrossfade());
@@ -88,7 +89,18 @@ public class MusicManager : MonoBehaviour
         // Se ainda existe música na fila
         if (nextClip != null)
         {
-            yield return StartCoroutine(Crossfade());
+            if (crossFade)
+            {
+                // crossfade
+                yield return StartCoroutine(Crossfade());
+            }
+            else
+            {
+                // troca direta sem fade
+                currentSource.Stop();
+                PlayNow(nextClip);
+                nextClip = null;
+            }
         }
 
         crossfadeRoutine = null;
