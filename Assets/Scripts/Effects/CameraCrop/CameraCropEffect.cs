@@ -19,11 +19,11 @@ namespace Effects.CameraCrop
                 controller.StartCoroutine(ChangeZoom(cam.orthographicSize / _cropMultiplier));
         }
 
-        public override void Remove(PlayerController controller)
+        public override IEnumerator Remove(PlayerController controller)
         {
             var cam = Camera.main;
-            if (cam != null)
-                controller.StartCoroutine(ChangeZoom(cam.orthographicSize * _cropMultiplier));
+            if (cam)
+                yield return controller.StartCoroutine(ChangeZoom(cam.orthographicSize * _cropMultiplier));
         }
 
         private IEnumerator ChangeZoom(float targetSize)

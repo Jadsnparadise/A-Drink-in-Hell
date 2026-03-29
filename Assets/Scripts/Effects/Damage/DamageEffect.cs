@@ -13,10 +13,5 @@ namespace Effects.Damage
         {
             GameManager.Instance.DamagePlayer(_damage);
         }
-
-        public override void Remove(PlayerController controller)
-        {
-            // Nothing to remove
-        }
     }
 }

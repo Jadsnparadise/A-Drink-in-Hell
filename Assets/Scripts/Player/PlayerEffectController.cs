@@ -41,11 +41,22 @@ namespace Player
             
             if (_activeEffects.TryGetValue(type, out var activeEffect))
             {
-                activeEffect.Effect.Remove(_playerController);
                 StopCoroutine(activeEffect.Coroutine);
+                _activeEffects.Remove(type);
+                StartCoroutine(ReplaceEffectRoutine(activeEffect.Effect, effect));
+                return;
             }
             
             _activeEffects[type] = new ActiveEffect(effect, StartCoroutine(EffectRoutine(effect)));
+        }
+
+        private IEnumerator ReplaceEffectRoutine(PlayerEffect oldEffect, PlayerEffect newEffect)
+        {
+            var type = newEffect.GetType();
+            
+            yield return oldEffect.Remove(_playerController);
+            
+            _activeEffects[type] = new ActiveEffect(newEffect, StartCoroutine(EffectRoutine(newEffect)));
         }
 
         private IEnumerator EffectRoutine(PlayerEffect effect)
@@ -54,7 +65,7 @@ namespace Player
             
             effect.Apply(_playerController);
             yield return new WaitForSeconds(effect.Duration);
-            effect.Remove(_playerController);
+            yield return effect.Remove(_playerController);
             
             _activeEffects.Remove(type);
         }

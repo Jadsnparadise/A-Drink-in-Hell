@@ -14,7 +14,7 @@ namespace Enemies
         protected float LastDamageTime;
         protected SpriteRenderer SpriteRenderer;
         protected EnemyAttack Attacker;
-        
+
         private bool _isDead = false;
 
         protected virtual void Awake()
@@ -25,12 +25,15 @@ namespace Enemies
             Attacker = GetComponentInParent<EnemyAttack>();
         }
 
+        public event System.Action<int> OnDamaged;
+
         public virtual void TakeDamage(int amount)
         {
             if (!CanDamage()) return;
             Health.TakeDamage(amount);
 
             LastDamageTime = Time.time;
+            OnDamaged?.Invoke(amount);
             StartCoroutine(DamageAnimation());
 
             if (Health.IsDead()) Die();
@@ -43,7 +46,8 @@ namespace Enemies
 
         protected virtual void Die()
         {
-            Attacker.hitboxCollider.enabled = false;
+            if (Attacker.hitboxCollider)
+                Attacker.hitboxCollider.enabled = false;
             if (!_isDead)
                 StartCoroutine(DieRoutine());
             _isDead = true;

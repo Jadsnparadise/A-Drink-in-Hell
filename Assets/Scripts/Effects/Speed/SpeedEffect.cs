@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Effects.Speed
@@ -17,9 +18,10 @@ namespace Effects.Speed
             controller.MultiplySpeed(_speedMultiplier);
         }
 
-        public override void Remove(PlayerController controller)
+        public override IEnumerator Remove(PlayerController controller)
         {
             controller.MultiplySpeed(1 / _speedMultiplier);
+            yield break;
         }
     }
 }

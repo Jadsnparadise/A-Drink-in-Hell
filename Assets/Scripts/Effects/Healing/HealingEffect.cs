@@ -13,10 +13,5 @@ namespace Effects.Healing
         {
             GameManager.Instance.HealPlayer(_amount);
         }
-
-        public override void Remove(PlayerController controller)
-        {
-            // Nothing to remove
-        }
     }
 }

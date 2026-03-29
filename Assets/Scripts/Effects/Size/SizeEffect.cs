@@ -29,17 +29,17 @@ namespace Effects.Size
                 controller.StartCoroutine(ChangeZoom(cam.orthographicSize * _sizeMultiplier));
         }
 
-        public override void Remove(PlayerController controller)
+        public override IEnumerator Remove(PlayerController controller)
         {
             var targetScale = controller.transform.localScale / _sizeMultiplier;
-            controller.StartCoroutine(ChangeSize(targetScale, controller));
+            yield return controller.StartCoroutine(ChangeSize(targetScale, controller));
             
             if (_speedIncluded)
                 controller.MultiplySpeed(1 / _sizeMultiplier);
 
             var cam = Camera.main;
             if (_cameraIncluded && cam != null)
-                controller.StartCoroutine(ChangeZoom(cam.orthographicSize / _sizeMultiplier));
+                yield return controller.StartCoroutine(ChangeZoom(cam.orthographicSize / _sizeMultiplier));
         }
 
         private IEnumerator ChangeSize(Vector3 targetScale, PlayerController controller)

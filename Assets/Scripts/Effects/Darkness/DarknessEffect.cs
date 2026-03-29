@@ -23,13 +23,12 @@ namespace Effects.Darkness
             CreatePlayerLight(controller);
         }
 
-        public override void Remove(PlayerController controller)
+        public override IEnumerator Remove(PlayerController controller)
         {
-            if (_globalLight == null) return;
-            controller.StartCoroutine(ChangeLightIntensity(1f, _globalLight));
-
-            if (_playerLight == null) return;
-            controller.StartCoroutine(RemovePlayerLight(controller));
+            if (_globalLight)
+                yield return controller.StartCoroutine(ChangeLightIntensity(1f, _globalLight));
+            if (_playerLight)
+                yield return controller.StartCoroutine(RemovePlayerLight(controller));
         }
 
         private void GetGlobalLight()
