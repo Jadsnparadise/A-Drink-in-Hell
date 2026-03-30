@@ -8445,26 +8445,6 @@ PrefabInstance:
       value: UI
       objectReference: {fileID: 0}
     - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: endEventDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2128121585}
@@ -8472,50 +8452,6 @@ PrefabInstance:
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 519420033}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPortal
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetFollowState
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueStart.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PortalController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CameraFollow, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 1712335766786360516, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 3020114486279447867, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_Color.a
-      value: 0.58431375
-      objectReference: {fileID: 0}
-    - target: {fileID: 4349735191670241786, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5266981708767947416, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -8597,22 +8533,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: endEventDelay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 2128121585}
@@ -8620,54 +8540,6 @@ PrefabInstance:
       propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 519420033}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: OpenPortal
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: SetFollowState
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: PortalController, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
-      value: CameraFollow, Assembly-CSharp
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5355381939457762439, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: onDialogueEnd.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
-      objectReference: {fileID: 0}
-    - target: {fileID: 5991427499918133818, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7810704330055127324, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 232
-      objectReference: {fileID: 0}
-    - target: {fileID: 8705162499824745518, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 232
-      objectReference: {fileID: 0}
-    - target: {fileID: 9143236830276902557, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
-      propertyPath: m_Color.a
-      value: 0.58431375
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

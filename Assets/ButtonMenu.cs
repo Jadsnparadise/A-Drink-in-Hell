@@ -2,7 +2,6 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-// Garante que o objeto tenha um AudioSource para o som
 [RequireComponent(typeof(AudioSource))]
 public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
@@ -20,7 +19,6 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private AudioClip hoverSound;
     [SerializeField] private float volume = 0.5f;
 
-    // Referências e Variáveis de Controle
     private Image buttonImage;
     private AudioSource audioSource;
 
@@ -32,19 +30,17 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void Awake()
     {
-        // Pega as referências necessárias
         buttonImage = GetComponent<Image>();
         audioSource = GetComponent<AudioSource>();
 
-        // Configuração básica do AudioSource para UI
+
         audioSource.playOnAwake = false;
         audioSource.loop = false;
-        audioSource.spatialBlend = 0f; // Som 2D
+        audioSource.spatialBlend = 0f;
     }
 
     void Start()
     {
-        // Salva os estados iniciais
         if (useScale)
         {
             initialScale = transform.localScale;
@@ -65,43 +61,34 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     void Update()
     {
-        // Aplica a interpolação suave de Escala
         if (useScale)
         {
             transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSpeed);
         }
 
-        // Aplica a interpolação suave de Cor
         if (useColor && buttonImage != null)
         {
             buttonImage.color = Color.Lerp(buttonImage.color, targetColor, Time.deltaTime * colorSpeed);
         }
     }
 
-    // --- Detectores do Mouse ---
-
     public void OnPointerEnter(PointerEventData eventData)
     {
-        // Define os alvos para "Mês em cima"
         if (useScale) targetScale = Vector3.Scale(initialScale, scaleFactor);
         if (useColor) targetColor = hoverColor;
 
-        // Toca o som (uma vez)
         if (hoverSound != null && audioSource != null)
         {
-            // PlayOneShot é ótimo porque não corta sons que já estão tocando
             audioSource.PlayOneShot(hoverSound, volume);
         }
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        // Define os alvos para "Mês saiu" (volta ao normal)
         if (useScale) targetScale = initialScale;
         if (useColor) targetColor = initialColor;
     }
 
-    // Garante que o botão volte ao normal se for desativado
     void OnDisable()
     {
         if (useScale) transform.localScale = initialScale;

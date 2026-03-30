@@ -79,13 +79,14 @@ public class DialogueSystem : MonoBehaviour
         }
 
         uiText.text = "";
+        uiText.transform.parent.gameObject.SetActive(false);
 
         if (endEventDelay > 0f)
         {
             yield return new WaitForSeconds(endEventDelay);
         }
 
-        uiText.transform.parent.gameObject.SetActive(false);
+        
         onDialogueEnd?.Invoke();
         dialogueCoroutine = null;
     }
