@@ -116,6 +116,7 @@ public class GameManager : MonoBehaviour
         {
             Debug.Log("DRINK COMPLETO!");
             Invoke(nameof(GoToSatan), 2f);
+            MusicManager.Instance.PlayWinMusic();
         }
 
         
@@ -147,5 +148,6 @@ public class GameManager : MonoBehaviour
     private void PlayerDied()
     {
         gameOverUI.ShowGameOver();
+        MusicManager.Instance.PlayGameOverMusic();
     }
 }

@@ -13,34 +13,32 @@ public class IngredientSpawner : MonoBehaviour
 
     public void SpawnIngredients(List<IngredientData> requiredIngredients)
     {
-        List<IngredientData> pool = new List<IngredientData>();
+        List<IngredientData> shuffledIngredients = new List<IngredientData>(requiredIngredients);
 
-        // Garante pelo menos 1 de cada
-        pool.AddRange(requiredIngredients);
+        // Embaralha ingredientes
+        Shuffle(shuffledIngredients);
 
-        // Preenche o resto aleatoriamente
-        while (pool.Count < spawnPoints.Length)
-        {
-            IngredientData random = requiredIngredients[Random.Range(0, requiredIngredients.Count)];
-            pool.Add(random);
-        }
-
-        // Embaralha
-        for (int i = 0; i < pool.Count; i++)
-        {
-            int rand = Random.Range(i, pool.Count);
-            (pool[i], pool[rand]) = (pool[rand], pool[i]);
-        }
+        List<Transform> shuffledSpawnPoints = new List<Transform>(spawnPoints);
+        Shuffle(shuffledSpawnPoints);
 
         // Spawn
-        for (int i = 0; i < spawnPoints.Length; i++)
+        for (int i = 0; i < 3; i++)
         {
-            GameObject prefab = GetPrefabByName(pool[i].name);
+            GameObject prefab = GetPrefabByName(shuffledIngredients[i].name);
 
             if (prefab != null)
             {
-                Instantiate(prefab, spawnPoints[i].position, Quaternion.identity);
+                Instantiate(prefab, shuffledSpawnPoints[i].position, Quaternion.identity);
             }
+        }
+    }
+
+    void Shuffle<T>(List<T> list)
+    {
+        for (int i = 0; i < list.Count; i++)
+        {
+            int rand = Random.Range(i, list.Count);
+            (list[i], list[rand]) = (list[rand], list[i]);
         }
     }
 

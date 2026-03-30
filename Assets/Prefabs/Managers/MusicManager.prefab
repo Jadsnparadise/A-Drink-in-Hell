@@ -50,6 +50,10 @@ MonoBehaviour:
   sourceB: {fileID: 4863984989015935404}
   fadeDuration: 2
   maxVolume: 0.25
+  crossFade: 0
+  mainMenuMusic: {fileID: 0}
+  gameOverMusic: {fileID: 8300000, guid: 5f110bf9edab3b64cb652d0d3237a001, type: 3}
+  winMusic: {fileID: 8300000, guid: 93bc9abff57cf3c4998064736123ab82, type: 3}
 --- !u!82 &763581103268355392
 AudioSource:
   m_ObjectHideFlags: 0

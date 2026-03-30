@@ -6,7 +6,7 @@ public class MusicManager : MonoBehaviour
 {
     public static MusicManager Instance;
 
-    [Header("Audio Sources")]
+    [Header("Audio Sources (for CrossFade)")]
     [SerializeField] private AudioSource sourceA;
     [SerializeField] private AudioSource sourceB;
 
@@ -16,6 +16,11 @@ public class MusicManager : MonoBehaviour
     [SerializeField] private float maxVolume = 0.25f;
 
     [SerializeField] private bool crossFade;
+
+    [Header("Audio Clips")]
+    [SerializeField] private AudioClip mainMenuMusic;
+    [SerializeField] private AudioClip gameOverMusic;
+    [SerializeField] private AudioClip winMusic;
 
     private AudioSource currentSource;
     private AudioSource nextSource;
@@ -157,5 +162,33 @@ public class MusicManager : MonoBehaviour
         crossfadeRoutine = null;
 
         Debug.Log("Nova música: " + currentClip.name);
+    }
+
+    public void StopMusicNow()
+    {
+        if (crossfadeRoutine != null)
+        {
+            StopCoroutine(crossfadeRoutine);
+            crossfadeRoutine = null;
+        }
+        currentSource.Stop();
+        nextSource.Stop();
+        currentClip = null;
+        nextClip = null;
+    }
+
+    public void PlayMainMenuMusic()
+    {
+        PlayNow(mainMenuMusic);
+    }
+
+    public void PlayWinMusic()
+    {
+        PlayNow(winMusic);
+    }
+
+    public void PlayGameOverMusic()
+    {
+        PlayNow(gameOverMusic);
     }
 }
