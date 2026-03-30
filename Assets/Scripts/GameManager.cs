@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     private Drink currentDrink;
 
     [Header("Game State")]
-    public bool firstTimeTalkingToSatan;
+    [HideInInspector] public bool firstTimeTalkingToSatan;
 
     [System.Serializable]
     public class Drink
@@ -27,9 +27,6 @@ public class GameManager : MonoBehaviour
     
     [Header("Health")]
     public Health PlayerHealth;
-    
-    [Header("Panels")]
-    [SerializeField] private GameOverUI gameOverUI;
 
     public event Action<List<IngredientData>> OnIngredientsGenerated;
     public event Action<string> OnIngredientCollected;
@@ -56,6 +53,7 @@ public class GameManager : MonoBehaviour
     public void StartRound(IngredientSpawner spawner)
     {
         collectedIngredients.Clear();
+        Time.timeScale = 1f; // Despausa o jogo
 
         Debug.Log("=== NOVA RODADA ===");
 
@@ -147,7 +145,8 @@ public class GameManager : MonoBehaviour
 
     private void PlayerDied()
     {
-        gameOverUI.ShowGameOver();
+        Time.timeScale = 0f; // Pausa o jogo
+        GameOverUI.Instance.ShowGameOver();
         MusicManager.Instance.PlayGameOverMusic();
     }
 }

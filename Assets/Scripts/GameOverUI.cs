@@ -5,8 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class GameOverUI : MonoBehaviour
 {
+    public static GameOverUI Instance;
     [SerializeField] private GameObject panel;
     private bool _gameOver = false;
+
+    private void Awake()
+    {
+        if(Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+        Instance = this;
+        DontDestroyOnLoad(this);
+    }
 
     private void Update()
     {
