@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -148,5 +149,18 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 0f; // Pausa o jogo
         GameOverUI.Instance.ShowGameOver();
         MusicManager.Instance.PlayGameOverMusic();
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
     }
 }
