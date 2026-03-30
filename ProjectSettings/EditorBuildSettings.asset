@@ -14,5 +14,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Mapa 1.unity
     guid: 807c40ada9007eb42aeddac575621a43
+  - enabled: 1
+    path: Assets/Scenes/FinalMap.unity
+    guid: 2388712e8a2c607bc940ee637fa82249
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

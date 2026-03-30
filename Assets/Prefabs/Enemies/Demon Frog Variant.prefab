@@ -148,6 +148,6 @@ MonoBehaviour:
   chasingMaxDistance: 1.5
   runningAwaySpeed: 0.8
   runningAwayMaxDistance: 1
-  jumpForce: 5
+  jumpForce: 3
   jumpCooldown: 5
   jumpProbability: 0.1

@@ -8,12 +8,14 @@ namespace Effects.Size
         private readonly float _sizeMultiplier;
         private readonly bool _cameraIncluded;
         private readonly bool _speedIncluded;
+        private readonly bool _jumpIncluded;
         
-        public SizeEffect(float duration, float sizeMultiplier, bool cameraIncluded, bool speedIncluded) : base(duration)
+        public SizeEffect(float duration, float sizeMultiplier, bool cameraIncluded, bool speedIncluded, bool jumpIncluded) : base(duration)
         {
             _sizeMultiplier = sizeMultiplier;
             _cameraIncluded = cameraIncluded;
             _speedIncluded = speedIncluded;
+            _jumpIncluded = jumpIncluded;
         }
 
         public override void Apply(PlayerController controller)
@@ -23,6 +25,9 @@ namespace Effects.Size
             
             if (_speedIncluded)
                 controller.MultiplySpeed(_sizeMultiplier);
+            
+            if  (_jumpIncluded)
+                controller.MultiplyJumpForce(_sizeMultiplier);
 
             var cam = Camera.main;
             if (_cameraIncluded && cam != null)
@@ -36,6 +41,9 @@ namespace Effects.Size
             
             if (_speedIncluded)
                 controller.MultiplySpeed(1 / _sizeMultiplier);
+            
+            if   (_jumpIncluded)
+                controller.MultiplyJumpForce(1 / _sizeMultiplier);
 
             var cam = Camera.main;
             if (_cameraIncluded && cam != null)

@@ -159,6 +159,11 @@ public class PlayerController : MonoBehaviour
         runSpeed *= multiplier;
     }
 
+    public void MultiplyJumpForce(float multiplier)
+    {
+        jumpForce *= multiplier;
+    }
+
     public void ApplyKnockback(Vector2 direction, float force, float duration)
     {
         StartCoroutine(KnockbackRoutine(direction, force, duration));

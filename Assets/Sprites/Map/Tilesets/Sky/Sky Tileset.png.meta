@@ -1,0 +1,1334 @@
+fileFormatVersion: 2
+guid: 8a48f24f457505a86beaea2f2145f8b8
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 9104890626485917832
+    second: Sky Tileset_0
+  - first:
+      213: 6844271032169168062
+    second: Sky Tileset_1
+  - first:
+      213: -495670535916593787
+    second: Sky Tileset_2
+  - first:
+      213: 8254984110543361458
+    second: Sky Tileset_3
+  - first:
+      213: -4273764786489669301
+    second: Sky Tileset_4
+  - first:
+      213: -39729873453877599
+    second: Sky Tileset_5
+  - first:
+      213: 2637975166346918409
+    second: Sky Tileset_6
+  - first:
+      213: 7207621820216563382
+    second: Sky Tileset_7
+  - first:
+      213: -4857335105148981471
+    second: Sky Tileset_8
+  - first:
+      213: 4917684038514458567
+    second: Sky Tileset_9
+  - first:
+      213: -2194623958437285411
+    second: Sky Tileset_10
+  - first:
+      213: -5413027143819050208
+    second: Sky Tileset_11
+  - first:
+      213: 2866761504253945427
+    second: Sky Tileset_12
+  - first:
+      213: -6604853588289791662
+    second: Sky Tileset_13
+  - first:
+      213: 1802084205781641458
+    second: Sky Tileset_14
+  - first:
+      213: -502330889994403714
+    second: Sky Tileset_15
+  - first:
+      213: 6089036178268096039
+    second: Sky Tileset_16
+  - first:
+      213: -6157537929834199037
+    second: Sky Tileset_17
+  - first:
+      213: 3756003505446676757
+    second: Sky Tileset_18
+  - first:
+      213: -6757639445072892850
+    second: Sky Tileset_19
+  - first:
+      213: -4459830561607126408
+    second: Sky Tileset_20
+  - first:
+      213: 9178701065865141145
+    second: Sky Tileset_21
+  - first:
+      213: -4057104155343708236
+    second: Sky Tileset_22
+  - first:
+      213: -4187027183545608592
+    second: Sky Tileset_23
+  - first:
+      213: -4853674137155379142
+    second: Sky Tileset_24
+  - first:
+      213: 6484639477369673720
+    second: Sky Tileset_25
+  - first:
+      213: 6684629056224781607
+    second: Sky Tileset_26
+  - first:
+      213: -3970660900865810878
+    second: Sky Tileset_27
+  - first:
+      213: 3955193741725004604
+    second: Sky Tileset_28
+  - first:
+      213: 3394279376024112665
+    second: Sky Tileset_29
+  - first:
+      213: -7187168997839067789
+    second: Sky Tileset_30
+  - first:
+      213: -3421076625050955331
+    second: Sky Tileset_31
+  - first:
+      213: -4137964625521613229
+    second: Sky Tileset_32
+  - first:
+      213: -3539459726595325417
+    second: Sky Tileset_33
+  - first:
+      213: 261896003976410015
+    second: Sky Tileset_34
+  - first:
+      213: 7303487203107464371
+    second: Sky Tileset_35
+  - first:
+      213: -1044684540599908877
+    second: Sky Tileset_36
+  - first:
+      213: -707592703997868902
+    second: Sky Tileset_37
+  - first:
+      213: -3466658103302920584
+    second: Sky Tileset_38
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Sky Tileset_0
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 911
+        width: 86
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8881a76f8c11b5e70800000000000000
+      internalID: 9104890626485917832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_1
+      rect:
+        serializedVersion: 2
+        x: 422
+        y: 873
+        width: 126
+        height: 147
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ebc70f2cd3cbbfe50800000000000000
+      internalID: 6844271032169168062
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_2
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 805
+        width: 204
+        height: 167
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 58d501516460f19f0800000000000000
+      internalID: -495670535916593787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_3
+      rect:
+        serializedVersion: 2
+        x: 791
+        y: 658
+        width: 347
+        height: 321
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2b55e6fcf489f8270800000000000000
+      internalID: 8254984110543361458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_4
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 870
+        width: 138
+        height: 108
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b49c5bfe19980b4c0800000000000000
+      internalID: -4273764786489669301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_5
+      rect:
+        serializedVersion: 2
+        x: 1277
+        y: 934
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a67fcdf3e9d27ff0800000000000000
+      internalID: -39729873453877599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_6
+      rect:
+        serializedVersion: 2
+        x: 1327
+        y: 871
+        width: 170
+        height: 96
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90af86cef68fb9420800000000000000
+      internalID: 2637975166346918409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_7
+      rect:
+        serializedVersion: 2
+        x: 333
+        y: 799
+        width: 108
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6b6dc5d9bdd960460800000000000000
+      internalID: 7207621820216563382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_8
+      rect:
+        serializedVersion: 2
+        x: 447
+        y: 787
+        width: 98
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 12f6f860577479cb0800000000000000
+      internalID: -4857335105148981471
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_9
+      rect:
+        serializedVersion: 2
+        x: 1466
+        y: 833
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cf3349f39f1f3440800000000000000
+      internalID: 4917684038514458567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_10
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 762
+        width: 177
+        height: 59
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd1b8cd23212b81e0800000000000000
+      internalID: -2194623958437285411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_11
+      rect:
+        serializedVersion: 2
+        x: 1282
+        y: 821
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0234e1dfd7011e4b0800000000000000
+      internalID: -5413027143819050208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_12
+      rect:
+        serializedVersion: 2
+        x: 1331
+        y: 807
+        width: 15
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35622dc3668c8c720800000000000000
+      internalID: 2866761504253945427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_13
+      rect:
+        serializedVersion: 2
+        x: 1397
+        y: 767
+        width: 95
+        height: 57
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 259d58cc7a8d654a0800000000000000
+      internalID: -6604853588289791662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_14
+      rect:
+        serializedVersion: 2
+        x: 1399
+        y: 815
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f8e4fc890a420910800000000000000
+      internalID: 1802084205781641458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_15
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 722
+        width: 105
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e708d2e87bc5709f0800000000000000
+      internalID: -502330889994403714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_16
+      rect:
+        serializedVersion: 2
+        x: 339
+        y: 625
+        width: 200
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7260c2e942a908450800000000000000
+      internalID: 6089036178268096039
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_17
+      rect:
+        serializedVersion: 2
+        x: 535
+        y: 623
+        width: 207
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3080d3970e70c8aa0800000000000000
+      internalID: -6157537929834199037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_18
+      rect:
+        serializedVersion: 2
+        x: 1343
+        y: 753
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 519654db941002430800000000000000
+      internalID: 3756003505446676757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_19
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 607
+        width: 316
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e4c234c6aba0832a0800000000000000
+      internalID: -6757639445072892850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_20
+      rect:
+        serializedVersion: 2
+        x: 1199
+        y: 719
+        width: 19
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 872f9f0cbbf7b12c0800000000000000
+      internalID: -4459830561607126408
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_21
+      rect:
+        serializedVersion: 2
+        x: 1273
+        y: 716
+        width: 9
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99b14621dfb416f70800000000000000
+      internalID: 9178701065865141145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_22
+      rect:
+        serializedVersion: 2
+        x: 1305
+        y: 722
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4bf1af3244542b7c0800000000000000
+      internalID: -4057104155343708236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_23
+      rect:
+        serializedVersion: 2
+        x: 1316
+        y: 663
+        width: 177
+        height: 89
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0761cdbd5f0b4e5c0800000000000000
+      internalID: -4187027183545608592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_24
+      rect:
+        serializedVersion: 2
+        x: 1265
+        y: 715
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a306a5f861944acb0800000000000000
+      internalID: -4853674137155379142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_25
+      rect:
+        serializedVersion: 2
+        x: 1189
+        y: 659
+        width: 98
+        height: 55
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f718116f311ef950800000000000000
+      internalID: 6484639477369673720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_26
+      rect:
+        serializedVersion: 2
+        x: 1271
+        y: 703
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 725688fb5b294cc50800000000000000
+      internalID: 6684629056224781607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_27
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 654
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24e5c58b2f065e8c0800000000000000
+      internalID: -3970660900865810878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_28
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 472
+        width: 94
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c33fd59a0cba3e630800000000000000
+      internalID: 3955193741725004604
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_29
+      rect:
+        serializedVersion: 2
+        x: 498
+        y: 472
+        width: 270
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91e0a5cdb17ea1f20800000000000000
+      internalID: 3394279376024112665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_30
+      rect:
+        serializedVersion: 2
+        x: 839
+        y: 351
+        width: 242
+        height: 162
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3752a1f20eb024c90800000000000000
+      internalID: -7187168997839067789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_31
+      rect:
+        serializedVersion: 2
+        x: 1092
+        y: 151
+        width: 414
+        height: 437
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db112766fe4e580d0800000000000000
+      internalID: -3421076625050955331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_32
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 311
+        width: 404
+        height: 130
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 356e6a2d81ff296c0800000000000000
+      internalID: -4137964625521613229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_33
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 190
+        width: 225
+        height: 88
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7120c7ba12051eec0800000000000000
+      internalID: -3539459726595325417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_34
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 304
+        width: 10
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f93bb1d270172a300800000000000000
+      internalID: 261896003976410015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_35
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 191
+        width: 64
+        height: 83
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b4e4da6ae23b5560800000000000000
+      internalID: 7303487203107464371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_36
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 316
+        width: 278
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3f5433ff1f88081f0800000000000000
+      internalID: -1044684540599908877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_37
+      rect:
+        serializedVersion: 2
+        x: 31
+        y: 56
+        width: 443
+        height: 90
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a948c884f202e26f0800000000000000
+      internalID: -707592703997868902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_38
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 55
+        width: 356
+        height: 168
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 87666ea72d4f3efc0800000000000000
+      internalID: -3466658103302920584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_39
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 911
+        width: 89
+        height: 77
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dff3d9842ba664cfebf42172f40df34c
+      internalID: -714407342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_40
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 830
+        width: 87
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ed7cf56518902aa0995eff18cf49752
+      internalID: -1453966241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_41
+      rect:
+        serializedVersion: 2
+        x: 43
+        y: 833
+        width: 88
+        height: 76
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e53ce3a0b1f2ad0d891f70e5cd079f0
+      internalID: 104302804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_42
+      rect:
+        serializedVersion: 2
+        x: 235
+        y: 916
+        width: 86
+        height: 72
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aaa361dc9cd7327d191ac8fc04462c87
+      internalID: -324845786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_43
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 828
+        width: 88
+        height: 66
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 892cd740bea3c78cc9c805262f40bd90
+      internalID: -292212387
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_44
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 916
+        width: 82
+        height: 70
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35e6853e1bbbadaca9af80c2df7952df
+      internalID: 1129269049
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_45
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 472
+        width: 95
+        height: 103
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf45f2ddbdb7732cda19489af116fc87
+      internalID: 355755857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_46
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 474
+        width: 86
+        height: 100
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4250efdac30076a097e4fb28acb0382
+      internalID: 381011524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_47
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 473
+        width: 88
+        height: 102
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c9ef95f8eac7d3d5a9759f530b5de2f
+      internalID: 1810313952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_48
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 727
+        width: 93
+        height: 92
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56d6638f1087bd59e83677160291ad9f
+      internalID: -1760514314
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_49
+      rect:
+        serializedVersion: 2
+        x: 228
+        y: 727
+        width: 100
+        height: 93
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b3e1cc2b313699cfd920e26212c041f0
+      internalID: -443002932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_50
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 191
+        width: 72
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e36fbfdd9679d4ae798532cb6be39f31
+      internalID: -950987598
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sky Tileset_51
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 191
+        width: 71
+        height: 84
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f071b1117b51c79eba4481367ec25be
+      internalID: -531830772
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: deb4e75535193edb2b2e8effdf3402f2
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Sky Tileset_39: -714407342
+      Sky Tileset_40: -1453966241
+      Sky Tileset_41: 104302804
+      Sky Tileset_42: -324845786
+      Sky Tileset_43: -292212387
+      Sky Tileset_44: 1129269049
+      Sky Tileset_45: 355755857
+      Sky Tileset_46: 381011524
+      Sky Tileset_47: 1810313952
+      Sky Tileset_48: -1760514314
+      Sky Tileset_49: -443002932
+      Sky Tileset_50: -950987598
+      Sky Tileset_51: -531830772
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
