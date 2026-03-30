@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -5,13 +6,13 @@ public class JesusController : MonoBehaviour
 {
    [Header("Dialogues")]
    [SerializeField] private DialogueSystem dialogue;
+   [SerializeField] private float delayToReleasePlayer = 0.5f;
 
    [Header("Events")]
    public UnityEvent onTalkStarted;
    public UnityEvent onTalkEnded;
 
-   private bool _playerIsClose;
-   private bool _isTalking;
+   private bool _alreadyTalked;
 
    private void Start()
    {
@@ -19,15 +20,21 @@ public class JesusController : MonoBehaviour
          dialogue.onDialogueEnd.AddListener(OnDialogueFinished);
    }
 
-   private void Update()
+   private void OnTriggerEnter2D(Collider2D collision)
    {
-      if (_playerIsClose && !_isTalking && Input.GetKeyDown(KeyCode.E))
+      if (_alreadyTalked) return;
+
+      if (collision.CompareTag("Player"))
+      {
          StartDialogue();
+      }
    }
 
    private void StartDialogue()
    {
-      _isTalking = true;
+      _alreadyTalked = true;
+
+      PlayerController.Instance.isTalking = true;
       onTalkStarted?.Invoke();
 
       if (dialogue)
@@ -36,20 +43,14 @@ public class JesusController : MonoBehaviour
 
    private void OnDialogueFinished()
    {
-      _isTalking = false;
+      StartCoroutine(nameof(EndTalk));
+   }
+
+   private IEnumerator EndTalk()
+   {
+      yield return new WaitForSeconds(delayToReleasePlayer);
+      PlayerController.Instance.isTalking = false;
       onTalkEnded?.Invoke();
-   }
-
-   private void OnTriggerEnter2D(Collider2D collision)
-   {
-      if (collision.CompareTag("Player"))
-         _playerIsClose = true;
-   }
-
-   private void OnTriggerExit2D(Collider2D collision)
-   {
-      if (collision.CompareTag("Player"))
-         _playerIsClose = false;
    }
 
    private void OnDestroy()
