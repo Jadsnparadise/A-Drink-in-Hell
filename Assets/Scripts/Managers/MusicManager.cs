@@ -191,4 +191,12 @@ public class MusicManager : MonoBehaviour
     {
         PlayNow(gameOverMusic);
     }
+
+    public void StopGameOverMusic()
+    {
+        if (currentClip == gameOverMusic)
+        {
+            StopMusicNow();
+        }
+    }
 }

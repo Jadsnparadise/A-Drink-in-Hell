@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 236a506480dcfb145a49317c421d86b5
+guid: 861a9307df236fe4e921a0a33ce1c4db
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4901190975328833723
-    second: parallax-demon-woods-far-trees_0
+      213: -7020922751645015488
+    second: Menu Background_0
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -98,13 +98,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: parallax-demon-woods-far-trees_0
+      name: Menu Background_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 592
-        height: 272
+        width: 2048
+        height: 1143
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -112,8 +112,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bb053d47937840440800000000000000
-      internalID: 4901190975328833723
+      spriteID: 042adb0b4fba09e90800000000000000
+      internalID: -7020922751645015488
       vertices: []
       indices: 
       edges: []
@@ -128,8 +128,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      parallax-demon-woods-far-trees_0: 4901190975328833723
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

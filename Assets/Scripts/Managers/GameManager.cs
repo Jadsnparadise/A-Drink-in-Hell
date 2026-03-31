@@ -58,6 +58,8 @@ public class GameManager : MonoBehaviour
 
         Debug.Log("=== NOVA RODADA ===");
 
+        MusicManager.Instance.StopGameOverMusic();
+
         spawner.SpawnIngredients(requiredIngredients);
         OnIngredientsGenerated?.Invoke(requiredIngredients);
     }
