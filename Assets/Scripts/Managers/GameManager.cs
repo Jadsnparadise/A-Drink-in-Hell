@@ -18,6 +18,12 @@ public class GameManager : MonoBehaviour
 
     [Header("Game State")]
     [HideInInspector] public bool firstTimeTalkingToSatan;
+    
+    [Header("Health")]
+    [SerializeField] private int maxHealth = 3;
+    [SerializeField] private float damageCooldown = 3;
+    
+    private float _damageCooldownTimer;
 
     [System.Serializable]
     public class Drink
@@ -31,7 +37,7 @@ public class GameManager : MonoBehaviour
 
     public event Action<List<IngredientData>> OnIngredientsGenerated;
     public event Action<string> OnIngredientCollected;
-
+    
     private void Awake()
     {
         if (Instance != null && Instance != this)
@@ -42,12 +48,12 @@ public class GameManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(this);
-        PlayerHealth = new Health(3);
+        PlayerHealth = new Health(maxHealth);
+        _damageCooldownTimer = 0;
     }
 
     private void Start()
     {
-        
         firstTimeTalkingToSatan = PlayerPrefs.GetInt("first Time", 0) != 0;
     }
 
@@ -119,8 +125,6 @@ public class GameManager : MonoBehaviour
             Invoke(nameof(GoToSatan), 2f);
             MusicManager.Instance.PlayWinMusic();
         }
-
-        
     }
 
     private void GoToSatan()
@@ -128,10 +132,13 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0);
     }
 
-    public void DamagePlayer(int damage)
+    public void DamagePlayer(int damage, bool ignoreCooldown = false)
     {
+        if (!(_damageCooldownTimer + damageCooldown <= Time.time) && !ignoreCooldown) return;
+        
         PlayerHealth.TakeDamage(damage);
         PlayerController.Instance.BlinkDamageFeedback();
+        _damageCooldownTimer = Time.time;
         if (PlayerHealth.IsDead())
             PlayerDied();
     }
@@ -144,13 +151,24 @@ public class GameManager : MonoBehaviour
     public void RevivePlayer()
     {
         PlayerHealth.FullHeal();
+        PlayerController.SetIgnoreEnemyLayerCollision(false);
     }
 
-    private void PlayerDied()
+    private static void PlayerDied()
+    {
+        MusicManager.Instance.PlayGameOverMusic();
+        
+        var controller = PlayerController.Instance;
+        
+        controller.SetTrigger("Death");
+        PlayerController.SetIgnoreEnemyLayerCollision(true);
+        controller.itsMovementIsBlocked = true;
+    }
+
+    public void ShowGameOver()
     {
         Time.timeScale = 0f; // Pausa o jogo
         GameOverUI.Instance.ShowGameOver();
-        MusicManager.Instance.PlayGameOverMusic();
     }
 
     public void StartGame()
@@ -161,8 +179,8 @@ public class GameManager : MonoBehaviour
     public void QuitGame()
     {
         Application.Quit();
-#if UNITY_EDITOR
-        EditorApplication.isPlaying = false;
-#endif
+        #if UNITY_EDITOR
+                EditorApplication.isPlaying = false;
+        #endif
     }
 }

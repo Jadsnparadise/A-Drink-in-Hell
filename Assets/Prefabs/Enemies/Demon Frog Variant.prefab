@@ -16,13 +16,25 @@ PrefabInstance:
       propertyPath: timeBeforeRunningAway
       value: 0.75
       objectReference: {fileID: 0}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -1808982527863717971, guid: e13e0b06d1336108087f0cef4231aab3, type: 3}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 13.14
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.46
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -59,6 +71,34 @@ PrefabInstance:
     - target: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Name
       value: Demon Frog Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Size.x
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Size.y
+      value: 0.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706935277469303866, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.211
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178900769852250457, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178900769852250457, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.193
       objectReference: {fileID: 0}
     - target: {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: jumpForce

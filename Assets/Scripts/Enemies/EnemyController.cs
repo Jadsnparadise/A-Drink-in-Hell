@@ -6,6 +6,8 @@ namespace Enemies
     [RequireComponent(typeof(SpriteRenderer))]
     public class EnemyController : MonoBehaviour
     {
+        private static readonly int Death = Animator.StringToHash("Death");
+
         [Header("Stats")]
         [SerializeField] protected int maxHealth;
         [SerializeField] protected float damageCooldown;
@@ -14,8 +16,10 @@ namespace Enemies
         protected float LastDamageTime;
         protected SpriteRenderer SpriteRenderer;
         protected EnemyAttack Attacker;
+        protected Rigidbody2D Rigidbody;
+        protected Animator Animator;
 
-        private bool _isDead = false;
+        protected bool IsDeath = false;
 
         protected virtual void Awake()
         {
@@ -23,6 +27,10 @@ namespace Enemies
             LastDamageTime = 0;
             SpriteRenderer = GetComponentInParent<SpriteRenderer>();
             Attacker = GetComponentInParent<EnemyAttack>();
+            Animator = GetComponentInParent<Animator>();
+            Rigidbody = GetComponentInParent<Rigidbody2D>();
+
+            IsDeath = false;
         }
 
         public event System.Action<int> OnDamaged;
@@ -34,9 +42,9 @@ namespace Enemies
 
             LastDamageTime = Time.time;
             OnDamaged?.Invoke(amount);
-            StartCoroutine(DamageAnimation());
 
             if (Health.IsDead()) Die();
+            StartCoroutine(DamageAnimation());
         }
 
         protected virtual bool CanDamage()
@@ -46,17 +54,15 @@ namespace Enemies
 
         protected virtual void Die()
         {
-            if (Attacker.hitboxCollider)
+            if (Attacker && Attacker.hitboxCollider)
                 Attacker.hitboxCollider.enabled = false;
-            if (!_isDead)
-                StartCoroutine(DieRoutine());
-            _isDead = true;
-        }
 
-        protected virtual IEnumerator DieRoutine()
-        {
-            yield return StartCoroutine(DieAnimation());
-            Destroy(gameObject);
+            if (Rigidbody)
+                Rigidbody.velocity = new Vector2(0f, Rigidbody.velocity.y);
+            
+            if (!IsDeath && Animator)
+                Animator.SetTrigger(Death);
+            IsDeath = true;
         }
 
         protected virtual IEnumerator DamageAnimation()
@@ -70,22 +76,14 @@ namespace Enemies
             }
         }
 
-        protected virtual IEnumerator DieAnimation()
+        protected virtual void OnDeathAnimationEnd()
         {
-            var targetScale = Vector3.one * 0.2f;
-            var velocity = Vector3.zero;
+            Destroy(gameObject);
+        }
 
-            while ((transform.localScale - targetScale).sqrMagnitude > 0.01f)
-            {
-                transform.localScale = Vector3.SmoothDamp(
-                    transform.localScale,
-                    targetScale,
-                    ref velocity,
-                    0.3f
-                );
-                yield return null;
-            }
-            transform.localScale = Vector3.zero;
+        public virtual bool IsDead()
+        {
+            return Health.IsDead();
         }
     }
 }

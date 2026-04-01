@@ -13,22 +13,22 @@ namespace Enemies
             Chasing,
             RunningAway
         }
-        
+
         [Header("Movement Settings")]
         [SerializeField] protected float minDistanceToPlayer;
-        
+
         [Header("Patrol Stats")]
         [SerializeField] protected float speed;
         [SerializeField] protected float maxDistance;
-        
+
         [Header("Chasing Stats")]
         [SerializeField] protected float chasingSpeed;
         [SerializeField] protected float chasingMaxDistance;
-        
+
         [Header("Running Away Stats")]
         [SerializeField] protected float runningAwaySpeed;
         [SerializeField] protected float runningAwayMaxDistance;
-        
+
         [Header("Jumping Stats")]
         [SerializeField] protected float jumpForce;
 
@@ -41,13 +41,15 @@ namespace Enemies
         protected PlayerSensor PlayerSensor;
         protected Rigidbody2D RigidBody;
         protected Animator Animator;
-        
+        protected EnemyController Controller;
+
         protected virtual void Awake()
         {
             PlayerSensor = GetComponentInChildren<PlayerSensor>();
             RigidBody = GetComponentInParent<Rigidbody2D>();
             Animator = GetComponentInParent<Animator>();
-            
+            Controller = GetComponentInParent<EnemyController>();
+
             RightLimit = transform.position;
             RightLimit.x += maxDistance;
             LeftLimit = transform.position;
@@ -57,7 +59,7 @@ namespace Enemies
             ChasingRightLimit.x += chasingMaxDistance;
             ChasingLeftLimit = transform.position;
             ChasingLeftLimit.x -= chasingMaxDistance;
-            
+
             State = MovementState.Patrolling;
         }
 
@@ -71,20 +73,22 @@ namespace Enemies
             var positionX = transform.position.x;
             var positionY = transform.position.y;
             var positionZ = transform.position.z;
-            
+
             positionX += ToRight ? runningAwayMaxDistance : -runningAwayMaxDistance;
             RunningAwayLimit = new Vector3(positionX, positionY, positionZ);
         }
-        
+
         protected void Update()
         {
+            if (Controller.IsDead()) return;
             UpdateAnimation();
         }
 
         protected virtual void FixedUpdate()
         {
+            if (Controller.IsDead()) return;
             UpdateState();
-            
+
             switch (State)
             {
                 case MovementState.Patrolling:
@@ -100,7 +104,7 @@ namespace Enemies
                     break;
             }
         }
-        
+
         protected virtual void UpdateState()
         {
             if (RigidBody)
@@ -124,7 +128,7 @@ namespace Enemies
 
         protected virtual bool IsFacingPlayer(Transform playerTransform)
         {
-            var directionToPlayer =  playerTransform.position.x - transform.position.x;
+            var directionToPlayer = playerTransform.position.x - transform.position.x;
             return Mathf.Approximately(Mathf.Sign(directionToPlayer), Mathf.Sign(transform.localScale.x));
         }
 
@@ -137,7 +141,7 @@ namespace Enemies
 
         protected virtual void ChasingCheckPlayerSensor()
         {
-            if (!PlayerSensor.Collider) 
+            if (!PlayerSensor.Collider)
                 State = MovementState.Patrolling;
         }
 
@@ -155,9 +159,9 @@ namespace Enemies
                 false when transform.position.x <= LeftLimit.x => true,
                 _ => ToRight
             };
-            
+
             var scaleX = transform.localScale.x;
-            
+
             if ((ToRight && scaleX < 0f) || (!ToRight && scaleX > 0f))
                 Flip();
         }
@@ -184,7 +188,7 @@ namespace Enemies
         protected virtual void UpdateChasingDirection()
         {
             if (IsFacingPlayer(PlayerSensor.Collider.transform)) return;
-            
+
             ToRight = !ToRight;
             Flip();
         }
@@ -199,10 +203,10 @@ namespace Enemies
             var reachedLimit = ToRight ? transform.position.x >= RunningAwayLimit.x : transform.position.x <= RunningAwayLimit.x;
 
             if (!reachedLimit) return;
-            
+
             ToRight = !ToRight;
             Flip();
-                
+
             State = PlayerSensor.Collider ? MovementState.Chasing : MovementState.Patrolling;
         }
 
@@ -231,6 +235,8 @@ namespace Enemies
 
         public virtual void Jump()
         {
+            if (Controller.IsDead()) return;
+
             if (RigidBody && IsGrounded)
             {
                 RigidBody.velocity = new Vector2(RigidBody.velocity.x, 0f);
@@ -255,13 +261,13 @@ namespace Enemies
         {
             IsGrounded = false;
         }
-        
+
         protected void UpdateAnimation()
         {
             if (!Animator || !RigidBody) return;
 
             var isWalking = Mathf.Abs(RigidBody.velocity.x) > 0.1f;
-            
+
             Animator.SetBool(IsWalking, isWalking);
             Animator.SetBool(IsJumping, !IsGrounded);
         }

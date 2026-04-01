@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wizard Darkness Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 232177820393931410, guid: 566324e022e4c1cc8bf028ed2e2baffb, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
     - target: {fileID: 610462854383290456, guid: 566324e022e4c1cc8bf028ed2e2baffb, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.41

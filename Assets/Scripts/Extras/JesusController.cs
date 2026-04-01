@@ -34,7 +34,7 @@ public class JesusController : MonoBehaviour
    {
       _alreadyTalked = true;
 
-      PlayerController.Instance.isTalking = true;
+      PlayerController.Instance.itsMovementIsBlocked = true;
       onTalkStarted?.Invoke();
 
       if (dialogue)
@@ -49,7 +49,7 @@ public class JesusController : MonoBehaviour
    private IEnumerator EndTalk()
    {
       yield return new WaitForSeconds(delayToReleasePlayer);
-      PlayerController.Instance.isTalking = false;
+      PlayerController.Instance.itsMovementIsBlocked = false;
       onTalkEnded?.Invoke();
    }
 

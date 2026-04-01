@@ -7,7 +7,7 @@ namespace Enemies.DemonFrog
         [Header("Jump configurations")]
         [SerializeField] private float jumpCooldown;
         [SerializeField] private float jumpProbability;
-        
+
         private float _lastJumpTime;
 
         protected override void Awake()
@@ -24,11 +24,12 @@ namespace Enemies.DemonFrog
 
         public override void Jump()
         {
+            if (Controller.IsDead()) return;
             if (Time.time < _lastJumpTime + jumpCooldown) return;
             var random = Random.Range(0, jumpProbability);
             if (!(random <= jumpProbability)) return;
             base.Jump();
-            _lastJumpTime =  Time.time;
+            _lastJumpTime = Time.time;
         }
     }
 }

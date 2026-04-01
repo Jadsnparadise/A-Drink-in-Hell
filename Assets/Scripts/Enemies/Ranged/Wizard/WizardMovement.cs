@@ -14,15 +14,12 @@ namespace Enemies.Ranged.Wizard
         [SerializeField] private float teleportCooldown = 5f;
         [SerializeField] private float teleportRadius = 5f;
         [SerializeField] private LayerMask obstacleLayer;
-        [SerializeField] private Collider2D myCollider;
-        [SerializeField] private Collider2D hitboxCollider;
 
         protected float LastTeleportTime;
-        protected bool IsTeleporting;
+        public bool IsTeleporting { get; protected set; }
         protected Vector2 TeleportTargetPoint;
-
-        protected EnemyController Controller;
         protected WizardAttack WizardAttack;
+        protected Collider2D Collider;
         protected SpriteRenderer SpriteRenderer;
 
         protected static readonly int DisappearTrigger = Animator.StringToHash("Disappear");
@@ -50,6 +47,14 @@ namespace Enemies.Ranged.Wizard
 
         protected void HandleDamageTaken(int amount)
         {
+            if (Controller && Controller.IsDead())
+            {
+                if (RigidBody) RigidBody.gravityScale = 1f;
+                return;
+            }
+
+            if (IsTeleporting) return;
+
             if (!PlayerSensor.Collider) return;
 
             var playerX = PlayerSensor.Collider.transform.position.x;
@@ -66,17 +71,16 @@ namespace Enemies.Ranged.Wizard
 
         protected void InitializeColliders()
         {
-            if (!myCollider) myCollider = GetComponent<Collider2D>();
-
-            if (hitboxCollider) return;
-            var atk = GetComponentInParent<EnemyAttack>();
-            if (atk) hitboxCollider = atk.hitboxCollider;
+            Collider = GetComponentInParent<Collider2D>();
         }
 
         protected override void FixedUpdate()
         {
             if (IsTeleporting)
             {
+                if (Time.time > LastTeleportTime + 3f)
+                    CompleteTeleportReappear();
+
                 StopMovement();
                 if (Animator) Animator.SetBool(IsWalking, false);
                 return;
@@ -138,11 +142,11 @@ namespace Enemies.Ranged.Wizard
 
         protected bool IsWallBehind()
         {
-            if (!myCollider) return false;
+            if (!Collider) return false;
 
             var direction = ToRight ? -1f : 1f;
-            Vector2 origin = myCollider.bounds.center;
-            var distance = myCollider.bounds.extents.x + 0.2f;
+            Vector2 origin = Collider.bounds.center;
+            var distance = Collider.bounds.extents.x + 0.2f;
 
             var hits = Physics2D.RaycastAll(origin, new Vector2(direction, 0), distance);
             return hits.Any(hit => !hit.collider.isTrigger && IsObstacle(hit.collider));
@@ -164,7 +168,7 @@ namespace Enemies.Ranged.Wizard
         protected bool TryFindBestTeleportTarget(out Vector2 bestPoint, out float bestDist)
         {
             var playerPos = PlayerSensor.Collider.transform.position;
-            var radiusForCheck = myCollider ? myCollider.bounds.extents.x : 0.5f;
+            var radiusForCheck = Collider ? Collider.bounds.extents.x : 0.5f;
 
             bestPoint = Vector2.zero;
             bestDist = -1f;
@@ -206,6 +210,13 @@ namespace Enemies.Ranged.Wizard
             IsTeleporting = true;
             LastTeleportTime = Time.time;
 
+            if (Collider) Collider.enabled = false;
+            if (RigidBody)
+            {
+                RigidBody.gravityScale = 0f;
+                RigidBody.velocity = Vector2.zero;
+            }
+
             StopMovement();
 
             if (Animator) Animator.SetTrigger(DisappearTrigger);
@@ -213,16 +224,6 @@ namespace Enemies.Ranged.Wizard
 
         protected void CompleteTeleportDisappear()
         {
-            StartCoroutine(TeleportRelocationRoutine());
-        }
-        
-        protected IEnumerator TeleportRelocationRoutine()
-        {
-            if (hitboxCollider) hitboxCollider.enabled = false;
-            if (SpriteRenderer) SpriteRenderer.enabled = false;
-            
-            yield return WaitForSeconds1;
-
             transform.position = TeleportTargetPoint;
 
             ChasingRightLimit = transform.position;
@@ -239,16 +240,14 @@ namespace Enemies.Ranged.Wizard
                     Flip();
             }
 
-            if (hitboxCollider) hitboxCollider.enabled = true;
-            if (SpriteRenderer) SpriteRenderer.enabled = true;
             if (Animator) Animator.SetTrigger(ReappearTrigger);
-
-            yield return WaitForSeconds02;
-            IsTeleporting = false;
         }
 
         protected void CompleteTeleportReappear()
         {
+            if (Collider) Collider.enabled = true;
+            if (RigidBody) RigidBody.gravityScale = 1f;
+
             IsTeleporting = false;
         }
     }

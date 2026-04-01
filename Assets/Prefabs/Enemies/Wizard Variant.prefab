@@ -8,17 +8,29 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5864203649119495929, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.17
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864203649119495929, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 5864203649119495929, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.225
+      objectReference: {fileID: 0}
     - target: {fileID: 5933284346303196853, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
       propertyPath: m_Name
       value: Wizard Variant
       objectReference: {fileID: 0}
     - target: {fileID: 6494690812298357811, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.41
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6494690812298357811, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6494690812298357811, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
       propertyPath: m_LocalPosition.z
@@ -69,9 +81,25 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8234557141472490865, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_Size.x
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234557141472490865, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_Size.y
+      value: 0.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234557141472490865, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: -8959435104959665722, guid: ca1a58bbc03b4847ea792ce8eb444d66, type: 3}
+      objectReference: {fileID: -1808982527863717971, guid: c6382fd5984528520a924d5e3ffe7923, type: 3}
+    - target: {fileID: 8234557141472490865, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8234557141472490865, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8249924932142206977, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
     - {fileID: 8193732677900106032, guid: aaa7f9e1c9896a346a4916390f7af7b8, type: 3}
@@ -139,9 +167,7 @@ MonoBehaviour:
   teleportRadius: 3
   obstacleLayer:
     serializedVersion: 2
-    m_Bits: 0
-  myCollider: {fileID: 0}
-  hitboxCollider: {fileID: 0}
+    m_Bits: 8
 --- !u!114 &6426172445373756011
 MonoBehaviour:
   m_ObjectHideFlags: 0

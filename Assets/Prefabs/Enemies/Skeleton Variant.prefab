@@ -23,7 +23,7 @@ PrefabInstance:
     - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 34b5dfc27b1cfc1ae9a28192a1c4e3f5, type: 3}
+      objectReference: {fileID: -1808982527863717971, guid: 0d89afa68292fe4b18197febb855ea04, type: 3}
     - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_SortingLayer
       value: 7
@@ -31,6 +31,14 @@ PrefabInstance:
     - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_SortingLayerID
       value: -1530385159
+      objectReference: {fileID: 0}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_SpriteSortPoint
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1092133992900365017, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Radius
@@ -70,15 +78,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2146664180029367380, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: damageCooldown
-      value: 1.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 15.041
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.596
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -118,7 +126,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Size.x
-      value: 0.20992398
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Size.y
@@ -126,15 +134,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Offset.x
-      value: 0.010038018
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Offset.y
-      value: -0.011472166
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706935277469303866, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.442
+      objectReference: {fileID: 0}
+    - target: {fileID: 3706935277469303866, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.026
       objectReference: {fileID: 0}
     - target: {fileID: 4893842590863410500, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Radius
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178900769852250457, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.033
+      objectReference: {fileID: 0}
+    - target: {fileID: 8178900769852250457, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.015
       objectReference: {fileID: 0}
     - target: {fileID: 8850363506498587690, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: speed
@@ -164,21 +188,13 @@ PrefabInstance:
       propertyPath: runningAwayMaxDistance
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 519085272520571896, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-    - {fileID: 2146664180029367380, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+    m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1636254591323450758}
-    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5891562847181651998}
-    - targetCorrespondingSourceObject: {fileID: 3191165167808592402, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 7605282446662723389}
   m_SourcePrefab: {fileID: 100100000, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
 --- !u!1 &1309657470096979411 stripped
 GameObject:
@@ -207,39 +223,3 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &5891562847181651998
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309657470096979411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 76101efa6b3f4d4191b77d366e293faf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 1
-  attackCooldown: 3
-  runningAwayAfterAttacking: 0
-  timeBeforeRunningAway: 0.2
-  hitboxCollider: {fileID: 3552661996051694872}
---- !u!114 &7605282446662723389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1309657470096979411}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e687c27706e47f18167c9ee6985feb9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 1
-  damageCooldown: 3
---- !u!58 &3552661996051694872 stripped
-CircleCollider2D:
-  m_CorrespondingSourceObject: {fileID: 1092133992900365017, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
-  m_PrefabInstance: {fileID: 4496172803145699265}
-  m_PrefabAsset: {fileID: 0}

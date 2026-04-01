@@ -24,35 +24,28 @@ namespace Enemies.Ranged
         [Tooltip("Time between attacks in the sequence")]
         [SerializeField] protected float burstCooldown = 1f;
 
-        private bool _isBursting = false;
+        protected int CurrentBurstCount = 0;
 
         protected override void Update()
         {
-            var player = GetPlayerCollider();
-            if (!player || _isBursting || !CanAttack()) return;
+            if (Controller.IsDead()) return;
 
-            StartCoroutine(BurstAttackSequence(player));
+            var player = GetPlayerCollider();
+            if (!player || !CanAttack() || !Animator) return;
+
+            LastInitialAttackTime = Time.time;
+            Attacking = true;
+            Animator.SetTrigger(Attack);
         }
 
-        private IEnumerator BurstAttackSequence(Collider2D player)
+        protected override bool CanAttack()
         {
-            _isBursting = true;
+            float currentCooldown = CurrentBurstCount == 0 ? attackCooldown : burstCooldown;
 
-            for (var i = 0; i < burstCount; i++)
-            {
-                var currentPlayer = GetPlayerCollider();
-                if (currentPlayer)
-                {
-                    if (Animator) Animator.SetTrigger(Attack);
-                    PerformAttack(currentPlayer);
-                }
+            if (LastInitialAttackTime + currentCooldown <= Time.time)
+                Attacking = false;
 
-                if (i < burstCount - 1)
-                    yield return new WaitForSeconds(burstCooldown);
-            }
-
-            LastAttackTime = Time.time;
-            _isBursting = false;
+            return LastAttackTime + currentCooldown <= Time.time && !Attacking;
         }
 
         protected override Collider2D GetPlayerCollider()
@@ -80,9 +73,22 @@ namespace Enemies.Ranged
             return isFacingRight == isPlayerToRight;
         }
 
+        protected virtual Vector3 GetOriginPoint()
+        {
+            var mainCollider = GetComponentInParent<Collider2D>();
+            if (mainCollider) return mainCollider.bounds.center;
+
+            if (hitboxCollider) return hitboxCollider.bounds.center;
+
+            return transform.position + Vector3.up * 0.5f;
+        }
+
         protected virtual Vector2 GetAttackVector(Collider2D player)
         {
-            var vectorToPlayer = (Vector2)(player.transform.position - transform.position);
+            var myCenter = GetOriginPoint();
+            var playerCenter = player.bounds.center;
+
+            var vectorToPlayer = (Vector2)(playerCenter - myCenter);
 
             var playerRb = player.attachedRigidbody;
             if (playerRb)
@@ -91,28 +97,43 @@ namespace Enemies.Ranged
             return vectorToPlayer;
         }
 
-        protected virtual void PerformAttack(Collider2D player)
+        protected override void PerformAttack()
         {
+            if (Controller.IsDead()) return;
+
+            LastAttackTime = Time.time;
+            CurrentBurstCount++;
+
+            if (CurrentBurstCount >= burstCount)
+                CurrentBurstCount = 0;
+
+
+            var player = GetPlayerCollider();
+            if (!player || Controller.IsDead()) return;
+
+            var myCenter = GetOriginPoint();
             var vectorToPlayer = GetAttackVector(player);
             var distance = vectorToPlayer.magnitude;
             var direction = vectorToPlayer.normalized;
-            var spawnPosition = transform.position + (Vector3)(direction * projectileSpawnOffset);
 
-            if (IsLineOfSightBlocked(direction, distance))
+            var spawnPosition = myCenter + (Vector3)(direction * projectileSpawnOffset);
+
+            if (IsLineOfSightBlocked(myCenter, direction, distance))
                 return;
 
             var projInst = Instantiate(projectile, spawnPosition, Quaternion.identity);
             projInst.Launch(direction);
+
+            if (runningAwayAfterAttacking && CurrentBurstCount == 0)
+                StartCoroutine(ActiveRunningAway());
         }
 
-        private bool IsLineOfSightBlocked(Vector2 direction, float distance)
+        private bool IsLineOfSightBlocked(Vector2 origin, Vector2 direction, float distance)
         {
             if (!projectile.CollidesWith(ProjectileBase.CollisionType.Walls))
                 return false;
-            
-            var slightlyElevatedOrigin = new Vector2(transform.position.x, transform.position.y + 0.5f);
 
-            var hits = Physics2D.RaycastAll(slightlyElevatedOrigin, direction, distance);
+            var hits = Physics2D.RaycastAll(origin, direction, distance);
             return hits.Any(hit => hit.collider.TryGetComponent<TilemapCollider2D>(out _));
         }
     }

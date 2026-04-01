@@ -101,12 +101,12 @@ TextureImporter:
       name: frame_005_0
       rect:
         serializedVersion: 2
-        x: 16
-        y: 3
-        width: 25
-        height: 47
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 17
+        y: 4
+        width: 23
+        height: 45
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -121,7 +121,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: ec0e0b635e7a99a22a0578d41e6e5781
     internalID: 0
     vertices: []
     indices: 

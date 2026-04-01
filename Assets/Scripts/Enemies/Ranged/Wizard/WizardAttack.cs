@@ -9,6 +9,13 @@ namespace Enemies.Ranged.Wizard
       [SerializeField] private float attackDelay = 0.3f;
 
       private float _blockedUntil;
+      private WizardMovement _wizardMovement;
+
+      protected override void Awake()
+      {
+         base.Awake();
+         _wizardMovement = GetComponent<WizardMovement>();
+      }
 
       public void AddPostHitDelay(float delay)
       {
@@ -17,19 +24,8 @@ namespace Enemies.Ranged.Wizard
 
       protected override bool CanAttack()
       {
+         if (_wizardMovement && _wizardMovement.IsTeleporting) return false;
          return base.CanAttack() && Time.time >= _blockedUntil;
-      }
-
-      protected override void PerformAttack(Collider2D player)
-      {
-         StartCoroutine(DelayedPerformAttack(player));
-      }
-
-      private IEnumerator DelayedPerformAttack(Collider2D player)
-      {
-         yield return new WaitForSeconds(attackDelay);
-         if (player)
-            base.PerformAttack(player);
       }
    }
 }

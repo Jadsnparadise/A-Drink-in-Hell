@@ -26,7 +26,7 @@ public class SatanController : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))
         {
             onArriveOnSatan?.Invoke();
-            PlayerController.Instance.isTalking= true;
+            PlayerController.Instance.itsMovementIsBlocked = true;
             if (gameManager.firstTimeTalkingToSatan)
             {
                 firstTalk.StartDialogue();
@@ -52,7 +52,7 @@ public class SatanController : MonoBehaviour
     private IEnumerator EndTalk()
     {
         yield return new WaitForSeconds(delayToReleasePlayer);
-        PlayerController.Instance.isTalking = false;
+        PlayerController.Instance.itsMovementIsBlocked = false;
     }
 
     private void OnDestroy()
