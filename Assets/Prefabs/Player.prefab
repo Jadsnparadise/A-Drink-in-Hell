@@ -172,9 +172,9 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
-  m_LinearDrag: 0
+  m_LinearDrag: 1
   m_AngularDrag: 0.05
-  m_GravityScale: 3
+  m_GravityScale: 2
   m_Material: {fileID: 6200000, guid: ef1bf7da0d370e2468bedca7c06d274d, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -200,7 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkSpeed: 2
   runSpeed: 3
-  jumpForce: 9.5
+  jumpForce: 9
   isTalking: 0
   isGrounded: 0
   currentPlatform: {fileID: 0}
