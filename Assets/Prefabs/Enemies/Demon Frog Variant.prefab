@@ -28,6 +28,10 @@ PrefabInstance:
       propertyPath: m_SpriteSortPoint
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 889759349961040342, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2612034592769865876, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -78,15 +82,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Size.y
-      value: 0.43
+      value: 0.4152649
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Offset.x
-      value: 0.02
+      value: 0.020000003
       objectReference: {fileID: 0}
     - target: {fileID: 3422699825744589406, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_Offset.y
-      value: 0.21
+      value: 0.21736756
       objectReference: {fileID: 0}
     - target: {fileID: 3706935277469303866, guid: 3412a6a5382b67e3896251a61805d33b, type: 3}
       propertyPath: m_LocalPosition.y

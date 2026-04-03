@@ -105,9 +105,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 12
-        y: 20
+        y: 15
         width: 36
-        height: 28
+        height: 33
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -117,27 +117,6 @@ TextureImporter:
       bones: []
       spriteID: a09c861ca47191c50800000000000000
       internalID: 6636361135747025162
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: frame_005_1
-      rect:
-        serializedVersion: 2
-        x: 31
-        y: 15
-        width: 17
-        height: 8
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 929ce4f2cfd12cb49bfe7f1ab35fc6bd
-      internalID: 2643206577420180900
       vertices: []
       indices: 
       edges: []
