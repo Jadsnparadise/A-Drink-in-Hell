@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -18,6 +19,9 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [Header("Audio")]
     [SerializeField] private AudioClip hoverSound;
     [SerializeField] private float volume = 0.5f;
+
+    [Header("Text")]
+    [SerializeField] private TMP_Text buttonText;
 
     private Image buttonImage;
     private AudioSource audioSource;
@@ -81,12 +85,16 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         {
             audioSource.PlayOneShot(hoverSound, volume);
         }
+
+        buttonText.color = Color.yellow;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         if (useScale) targetScale = initialScale;
         if (useColor) targetColor = initialColor;
+
+        buttonText.color = Color.white;
     }
 
     void OnDisable()
