@@ -3,7 +3,7 @@ using static UnityEngine.GraphicsBuffer;
 
 public class CameraFollow : MonoBehaviour
 {
-    
+    public static CameraFollow Instance;
     private Transform player;
     private Rigidbody2D playerRb;
 
@@ -25,15 +25,34 @@ public class CameraFollow : MonoBehaviour
     private float velocityY;
     private float lookAheadVelocity;
 
+    private bool isCameraLocked;
+
     void Start()
     {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(gameObject);
+            return;
+        }
+
+        Instance = this;
         player = PlayerController.Instance.transform;
         playerRb = PlayerController.Instance.GetComponent<Rigidbody2D>();
     }
 
+    public void LockCamera()
+    {
+        isCameraLocked = true;
+    }
+
+    public void UnlockCamera()
+    {
+        isCameraLocked = false;
+    }
+
     void LateUpdate()
     {
-        if (player == null) return;
+        if (player == null || isCameraLocked) return;
 
         Vector2 playerVelocity = playerRb.velocity;
 
