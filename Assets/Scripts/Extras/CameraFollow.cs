@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     [SerializeField] private float smoothTimeY = 0.15f;
 
     [Header("Look Ahead")]
-    [SerializeField] private float lookAheadDistance = 2f;
+    [SerializeField] private float baseLookAheadMultiplier = 1.5f;
     [SerializeField] private float lookAheadSmooth = 1;
 
     [Header("Fall Behavior")]
@@ -26,7 +26,7 @@ public class CameraFollow : MonoBehaviour
     private float lookAheadVelocity;
 
     private bool isCameraLocked;
-
+    
     void Start()
     {
         if (Instance != null && Instance != this)
@@ -59,11 +59,13 @@ public class CameraFollow : MonoBehaviour
         bool isMovingHorizontally = Mathf.Abs(playerVelocity.x) > 0.1f;
         bool isFalling = playerVelocity.y < -0.1f;
 
+        float playerScale = Mathf.Abs(player.localScale.x);
 
-        // LOOK AHEAD
+        float dynamicLookAhead = playerScale * baseLookAheadMultiplier;
+
         if (isMovingHorizontally)
         {
-            targetLookAhead = Mathf.Sign(playerVelocity.x) * lookAheadDistance;
+            targetLookAhead = Mathf.Sign(playerVelocity.x) * dynamicLookAhead;
         } else
         {
             targetLookAhead = 0f;
@@ -76,7 +78,6 @@ public class CameraFollow : MonoBehaviour
             lookAheadSmooth
         );
 
-        // POSIÇÃO ALVO X
         float targetX = player.position.x + currentLookAhead;
 
         float newX = Mathf.SmoothDamp(

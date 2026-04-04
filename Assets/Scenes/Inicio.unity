@@ -26609,7 +26609,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   smoothTimeX: 0.1
   smoothTimeY: 0.15
-  lookAheadDistance: 0
+  baseLookAheadMultiplier: 0
   lookAheadSmooth: 1
   fallThreshold: 0.5
 --- !u!1 &521867400
