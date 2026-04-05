@@ -6,9 +6,10 @@ namespace Effects.Darkness
     public class DarknessData : EffectData
     {
         [SerializeField] private float radius;
+        [SerializeField] private GameObject playerLight;
         public override PlayerEffect CreateEffect()
         {
-            return new DarknessEffect(duration, radius);
+            return new DarknessEffect(duration, radius, playerLight);
         }
     }
 }

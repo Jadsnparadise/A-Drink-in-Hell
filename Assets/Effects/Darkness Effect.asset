@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   duration: 10
   radius: 1.5
+  playerLight: {fileID: 7325559635257847972, guid: 9ca7d6aac5a88134e95fd8505233d7d2, type: 3}

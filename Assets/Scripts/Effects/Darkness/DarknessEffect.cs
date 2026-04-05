@@ -10,9 +10,10 @@ namespace Effects.Darkness
         private Light2D _globalLight = null;
         private Light2D _playerLight = null;
 
-        public DarknessEffect(float duration, float radius) : base(duration)
+        public DarknessEffect(float duration, float radius, GameObject PlayerLight) : base(duration)
         {
             _radius = radius;
+            _playerLight = PlayerLight.GetComponent<Light2D>();
         }
 
         public override void Apply(PlayerController controller)
@@ -44,11 +45,10 @@ namespace Effects.Darkness
 
         private void CreatePlayerLight(PlayerController controller)
         {
-            var lightObj = new GameObject("PlayerDarknessLight");
+            var lightObj = GameObject.Instantiate(_playerLight);
             lightObj.transform.SetParent(controller.transform);
             lightObj.transform.localPosition = Vector3.zero;
-
-            _playerLight = lightObj.AddComponent<Light2D>();
+           
             _playerLight.lightType = Light2D.LightType.Point;
             _playerLight.pointLightOuterRadius = _radius;
             _playerLight.pointLightInnerRadius = _radius * 0.2f;
