@@ -1,3 +1,4 @@
+using System;
 using Effects;
 using Player;
 using UnityEngine;
@@ -31,6 +32,9 @@ public class EffectSurface : MonoBehaviour
     [SerializeField] private float knockbackDuration = 0.2f;
     [SerializeField] private bool upwardKnockbackOnly = false;
 
+    private Transform _player = null;
+    private bool _playerInside = false;
+
     private void OnValidate()
     {
         if (!System.Enum.IsDefined(typeof(EffectType), effectType))
@@ -44,79 +48,74 @@ public class EffectSurface : MonoBehaviour
         }
     }
 
-    private void OnCollisionStay2D(Collision2D other) => HandleContact(other.collider);
-    private void OnTriggerStay2D(Collider2D other) => HandleContact(other);
+    private void OnCollisionEnter2D(Collision2D other) => OnEnter(other.collider);
+    private void OnTriggerEnter2D(Collider2D other) => OnEnter(other);
+    private void OnCollisionExit2D(Collision2D other) => OnExit(other.collider);
+    private void OnTriggerExit2D(Collider2D other) => OnExit(other);
 
-    private void HandleContact(Collider2D other)
+    private void OnEnter(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
-            ApplyEffect(other.transform);
+        if (!other.gameObject.CompareTag("Player")) return;
+        _player = other.transform;
+        _playerInside = true;
     }
 
-    private void ApplyEffect(Transform player)
+    private void OnExit(Collider2D other)
+    {
+        if (!other.gameObject.CompareTag("Player")) return;
+        _playerInside = false;
+        _player = null;
+    }
+
+    private void Update()
+    {
+        if (!_playerInside) return;
+        ApplyEffect();
+    }
+
+    private void ApplyEffect()
     {
         switch (effectType)
         {
             case EffectType.Damage:
-                ApplyDamage(player);
+                ApplyDamage();
                 break;
             case EffectType.Teleport:
-                ApplyTeleport(player);
+                ApplyTeleport();
                 break;
             case EffectType.SpecialEffect:
-                ApplySpecialEffect(player);
+                ApplySpecialEffect();
                 break;
             default:
                 break;
         }
     }
 
-    private void ApplyDamage(Transform player)
+    private void ApplyDamage()
     {
         if (damageCooldown == 0 && _lastTimeDamage != 0) return;
         if (Time.time < _lastTimeDamage + damageCooldown) return;
         
         GameManager.Instance.DamagePlayer(damage);
-        KnockBack(player);
         _lastTimeDamage = Time.time;
     }
 
-    private void KnockBack(Transform player)
+    private void ApplyTeleport()
     {
-        if (knockbackForce <= 0) return;
-
-        Vector2 knockbackDirection;
-
-        if (upwardKnockbackOnly)
-        {
-            knockbackDirection = Vector2.up;
-        }
-        else
-        {
-            knockbackDirection = (transform.position - player.position).normalized; //pego o vetor direção do objeto ao player pra aplicar knockback
-            knockbackDirection.y = 0.5f; //fazer ele sair um pouco do chão pra o atrito não bugar o knockback
-            knockbackDirection.Normalize();
-        }
-
-        PlayerController.Instance.ApplyKnockback(knockbackDirection, knockbackForce, knockbackDuration);
-    }
-
-    private void ApplyTeleport(Transform player)
-    {
-        var target = teleport != null ? teleport : player.transform;
+        var target = teleport != null ? teleport : _player.transform;
         var displacement = teleportDistance > 0 ? Random.Range(-teleportDistance, teleportDistance) : 0;
         
         var position = target.position;
         position.x += displacement;
         
-        player.position = position;
+        _player.position = position;
     }
 
-    private void ApplySpecialEffect(Transform player)
+    private void ApplySpecialEffect()
     {
         if (effectData == null) return;
         var effect = effectData.CreateEffect();
-        if (!player.TryGetComponent<PlayerEffectController>(out var controller)) return;
+        if (!_player.TryGetComponent<PlayerEffectController>(out var controller)) return;
         controller.ApplyEffect(effect);
     }
 }

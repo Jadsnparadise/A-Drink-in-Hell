@@ -159,10 +159,7 @@ public class GameManager : MonoBehaviour
         MusicManager.Instance.PlayGameOverMusic();
         
         var controller = PlayerController.Instance;
-        
-        controller.SetTrigger("Death");
-        PlayerController.SetIgnoreEnemyLayerCollision(true);
-        controller.itsMovementIsBlocked = true;
+        controller.Die();
     }
 
     public void ShowGameOver()

@@ -1,8 +1,10 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using Enemies;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerAttack : MonoBehaviour
 {
@@ -18,16 +20,34 @@ public class PlayerAttack : MonoBehaviour
     private float _lastAttackTime;
     private bool _isAttacking = false;
     private Animator _animator;
+    private InputSystemActions _input;
+
+    private void Start()
+    {
+        ConfigureInput();
+    }
+
+    private void ConfigureInput()
+    {
+        _input = new InputSystemActions();
+        _input.Player.Attack.Enable();
+        _input.Player.Attack.performed += OnAttack;
+    }
+    
+
+    public void OnDisable()
+    {
+        _input.Player.Attack.Disable();
+    }
 
     private void Awake()
     {
         _animator = GetComponentInParent<Animator>();
     }
-    
-    private void Update()
+
+    private void OnAttack(InputAction.CallbackContext ctx)
     {
-        if (Input.GetButtonDown("Fire1"))
-            Attack();
+        Attack();
     }
 
     private void Attack()
@@ -40,9 +60,6 @@ public class PlayerAttack : MonoBehaviour
         _isAttacking = true;
         _animator.SetTrigger(Attack1);
         _lastAttackTime = Time.time;
-
-        //PerformAttack();
-        //(Agora a animação é responsável por chamar o método PerformAttack através de um evento de animação)
     }
 
     private void PerformAttack()

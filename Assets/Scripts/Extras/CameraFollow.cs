@@ -4,6 +4,7 @@ using static UnityEngine.GraphicsBuffer;
 public class CameraFollow : MonoBehaviour
 {
     public static CameraFollow Instance;
+    private PlayerController _playerController;
     private Transform player;
     private Rigidbody2D playerRb;
 
@@ -14,6 +15,11 @@ public class CameraFollow : MonoBehaviour
     [Header("Look Ahead")]
     [SerializeField] private float baseLookAheadMultiplier = 1.5f;
     [SerializeField] private float lookAheadSmooth = 1;
+    
+    [Header("Looking Settings")]
+    [SerializeField] private float lookingDistance = 1.2f;
+
+    [SerializeField] private float smoothTimeYLooking = 0.3f;
 
     [Header("Fall Behavior")]
     [SerializeField] private float fallThreshold = 0.6f;
@@ -36,8 +42,9 @@ public class CameraFollow : MonoBehaviour
         }
 
         Instance = this;
-        player = PlayerController.Instance.transform;
-        playerRb = PlayerController.Instance.GetComponent<Rigidbody2D>();
+        _playerController = PlayerController.Instance;
+        player = _playerController.transform;
+        playerRb = _playerController.GetComponent<Rigidbody2D>();
     }
 
     public void LockCamera()
@@ -52,7 +59,7 @@ public class CameraFollow : MonoBehaviour
 
     void LateUpdate()
     {
-        if (player == null || isCameraLocked) return;
+        if (!player || isCameraLocked) return;
 
         Vector2 playerVelocity = playerRb.velocity;
 
@@ -86,10 +93,10 @@ public class CameraFollow : MonoBehaviour
             ref velocityX,
             smoothTimeX
         );
-
-        // COMPORTAMENTO Y (TRAVA NA QUEDA)
+        
         float newY;
         float playerViewportY = Camera.main.WorldToViewportPoint(player.position).y;
+        var lookModifier = _playerController.LookingFrom() * 0.5f;
 
         if (isFalling && playerViewportY < fallThreshold)
         {
@@ -97,11 +104,12 @@ public class CameraFollow : MonoBehaviour
         }
         else
         {
+            var time = lookModifier != 0 ? smoothTimeYLooking : smoothTimeY;
             newY = Mathf.SmoothDamp(
                 transform.position.y,
-                player.position.y,
+                player.position.y + lookModifier,
                 ref velocityY,
-                smoothTimeY
+                time
             );
         }
 
