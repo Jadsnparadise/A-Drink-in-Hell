@@ -4,11 +4,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
+[DisallowMultipleComponent]
 public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Scale")]
     [SerializeField] private bool useScale = true;
-    [SerializeField] private Vector3 scaleFactor = new Vector3(1.1f, 1.1f, 1.1f);
+    [SerializeField] private Vector3 scaleFactor = new(1.1f, 1.1f, 1.1f);
     [SerializeField] private float scaleSpeed = 15f;
 
     [Header("Color")]
@@ -16,12 +17,14 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     [SerializeField] private Color hoverColor = Color.gray;
     [SerializeField] private float colorSpeed = 10f;
 
+    [Header("Text")]
+    [SerializeField] private TMP_Text buttonText;
+    [SerializeField] private Color textHoverColor = Color.yellow;
+    [SerializeField] private Color textDefaultColor = Color.white;
+
     [Header("Audio")]
     [SerializeField] private AudioClip hoverSound;
     [SerializeField] private float volume = 0.5f;
-
-    [Header("Text")]
-    [SerializeField] private TMP_Text buttonText;
 
     private Image buttonImage;
     private AudioSource audioSource;
@@ -32,74 +35,136 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     private Color initialColor;
     private Color targetColor;
 
-    void Awake()
+    private bool isHovered;
+
+    private void Awake()
     {
         buttonImage = GetComponent<Image>();
         audioSource = GetComponent<AudioSource>();
 
+        SetupInitialValues();
+        SetupAudio();
+    }
 
+    private void SetupInitialValues()
+    {
+        // SCALE
+        initialScale = transform.localScale == Vector3.zero ? Vector3.one : transform.localScale;
+        targetScale = initialScale;
+
+        // COLOR
+        if (buttonImage != null)
+        {
+            initialColor = buttonImage.color;
+            targetColor = initialColor;
+        }
+        else if (useColor)
+        {
+            Debug.LogWarning($"{name} não possui Image. Desativando uso de cor.");
+            useColor = false;
+        }
+    }
+
+    private void SetupAudio()
+    {
         audioSource.playOnAwake = false;
         audioSource.loop = false;
         audioSource.spatialBlend = 0f;
     }
 
-    void Start()
+    private void Update()
     {
-        if (useScale)
-        {
-            initialScale = transform.localScale;
-            targetScale = initialScale;
-        }
-
-        if (useColor && buttonImage != null)
-        {
-            initialColor = buttonImage.color;
-            targetColor = initialColor;
-        }
-        else if (useColor && buttonImage == null)
-        {
-            Debug.LogWarning($"O objeto {gameObject.name} não tem um componente 'Image' para mudar de cor.");
-            useColor = false;
-        }
+        UpdateScale();
+        UpdateColor();
     }
 
-    void Update()
+    private void UpdateScale()
     {
-        if (useScale)
-        {
-            transform.localScale = Vector3.Lerp(transform.localScale, targetScale, Time.deltaTime * scaleSpeed);
-        }
+        if (!useScale) return;
 
-        if (useColor && buttonImage != null)
-        {
-            buttonImage.color = Color.Lerp(buttonImage.color, targetColor, Time.deltaTime * colorSpeed);
-        }
+        transform.localScale = Vector3.Lerp(
+            transform.localScale,
+            targetScale,
+            Time.deltaTime * scaleSpeed
+        );
+    }
+
+    private void UpdateColor()
+    {
+        if (!useColor || buttonImage == null) return;
+
+        buttonImage.color = Color.Lerp(
+            buttonImage.color,
+            targetColor,
+            Time.deltaTime * colorSpeed
+        );
     }
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if (useScale) targetScale = Vector3.Scale(initialScale, scaleFactor);
-        if (useColor) targetColor = hoverColor;
+        isHovered = true;
 
-        if (hoverSound != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(hoverSound, volume);
-        }
-
-        buttonText.color = Color.yellow;
+        ApplyHoverState();
+        PlayHoverSound();
+        UpdateTextColor();
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        if (useScale) targetScale = initialScale;
-        if (useColor) targetColor = initialColor;
+        isHovered = false;
 
-        buttonText.color = Color.white;
+        ApplyDefaultState();
+        UpdateTextColor();
     }
 
-    void OnDisable()
+    private void ApplyHoverState()
     {
-        if (useScale) transform.localScale = initialScale;
-        if (useColor && buttonImage != null) buttonImage.color = initialColor;
+        if (useScale)
+            targetScale = Vector3.Scale(initialScale, scaleFactor);
+
+        if (useColor)
+            targetColor = hoverColor;
+    }
+
+    private void ApplyDefaultState()
+    {
+        if (useScale)
+            targetScale = initialScale;
+
+        if (useColor)
+            targetColor = initialColor;
+    }
+
+    private void UpdateTextColor()
+    {
+        if (buttonText == null) return;
+
+        buttonText.color = isHovered ? textHoverColor : textDefaultColor;
+    }
+
+    private void PlayHoverSound()
+    {
+        if (hoverSound == null) return;
+
+        audioSource.PlayOneShot(hoverSound, volume);
+    }
+
+    private void OnDisable()
+    {
+        ResetVisuals();
+    }
+
+    private void ResetVisuals()
+    {
+        if (useScale)
+            transform.localScale = initialScale;
+
+        if (useColor && buttonImage != null)
+            buttonImage.color = initialColor;
+
+        if (buttonText != null)
+            buttonText.color = textDefaultColor;
+
+        isHovered = false;
     }
 }

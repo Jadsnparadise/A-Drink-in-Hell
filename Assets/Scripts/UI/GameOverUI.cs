@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -24,7 +25,7 @@ public class GameOverUI : MonoBehaviour
     {
         if (_gameOver && Input.anyKeyDown)
         {
-            Restart();
+            GameManager.Instance.RestartGame();
         }
     }
 
@@ -32,11 +33,5 @@ public class GameOverUI : MonoBehaviour
     {
         _gameOver = true;
         panel.SetActive(true);
-    }
-
-    private static void Restart()
-    {
-        GameManager.Instance.RevivePlayer();
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }

@@ -47,8 +47,13 @@ public class GameManager : MonoBehaviour
         }
 
         Instance = this;
-        DontDestroyOnLoad(this);
-        PlayerHealth = new Health(maxHealth);
+
+        DontDestroyOnLoad(gameObject);
+
+        if (PlayerHealth == null)
+        {
+            PlayerHealth = new Health(maxHealth);
+        }
         _damageCooldownTimer = 0;
     }
 
@@ -179,5 +184,11 @@ public class GameManager : MonoBehaviour
         #if UNITY_EDITOR
                 EditorApplication.isPlaying = false;
         #endif
+    }
+
+    public void RestartGame()
+    {
+        RevivePlayer();
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
