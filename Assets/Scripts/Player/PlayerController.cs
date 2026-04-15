@@ -51,6 +51,28 @@ public class PlayerController : MonoBehaviour
         {
             Instance = this;
         }
+        
+        _input = new InputSystemActions();
+    }
+    
+    private void OnDestroy()
+    {
+        _input.Dispose();
+    }
+
+    private void OnDisable()
+    {   
+        if (_input == null) return;
+        
+        _input.Player.Jump.started -= OnJumpStarted;
+        _input.Player.Jump.canceled -= OnJumpCanceled;
+        
+        _input.Player.Disable();
+    }
+    
+    private void OnEnable()
+    {   
+        ConfigureInput();
     }
 
     void Start()
@@ -60,15 +82,11 @@ public class PlayerController : MonoBehaviour
         attack = GetComponentInParent<PlayerAttack>();
         playerSprite = GetComponentInParent<SpriteRenderer>();
         collider = GetComponentInParent<Collider2D>();
-
-        ConfigureInput();
     }
 
     private void ConfigureInput()
     {
-        _input = new InputSystemActions();
         _input.Player.Enable();
-        
         _input.Player.Jump.started += OnJumpStarted;
         _input.Player.Jump.canceled += OnJumpCanceled;
     }

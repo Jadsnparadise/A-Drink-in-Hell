@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 [RequireComponent(typeof(AudioSource))]
 [DisallowMultipleComponent]
-public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
+public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler, IDeselectHandler
 {
     [Header("Scale")]
     [SerializeField] private bool useScale = true;
@@ -60,7 +60,7 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         else if (useColor)
         {
-            Debug.LogWarning($"{name} não possui Image. Desativando uso de cor.");
+            Debug.LogWarning($"{name} nï¿½o possui Image. Desativando uso de cor.");
             useColor = false;
         }
     }
@@ -166,5 +166,22 @@ public class ButtonMenu : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             buttonText.color = textDefaultColor;
 
         isHovered = false;
+    }
+
+    public void OnSelect(BaseEventData eventData)
+    {
+        isHovered = true;
+
+        ApplyHoverState();
+        PlayHoverSound();
+        UpdateTextColor();
+    }
+
+    public void OnDeselect(BaseEventData eventData)
+    {
+        isHovered = false;
+
+        ApplyDefaultState();
+        UpdateTextColor();
     }
 }

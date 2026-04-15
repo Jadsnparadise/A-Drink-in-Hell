@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -173,17 +174,10 @@ public class GameManager : MonoBehaviour
         GameOverUI.Instance.ShowGameOver();
     }
 
-    public void StartGame()
+    public void BackToMainMenu()
     {
-        SceneManager.LoadScene(1);
-    }
-
-    public void QuitGame()
-    {
-        Application.Quit();
-        #if UNITY_EDITOR
-                EditorApplication.isPlaying = false;
-        #endif
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("Scenes/Menu");
     }
 
     public void RestartGame()

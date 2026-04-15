@@ -40,6 +40,12 @@ public class MusicManager : MonoBehaviour
 
         Instance = this;
         DontDestroyOnLoad(gameObject);
+        
+        var listeners = FindObjectsByType<AudioListener>(FindObjectsSortMode.None);
+        if (listeners.Length > 1)
+        {
+            Destroy(listeners[1]);
+        }
 
         currentSource = sourceA;
         nextSource = sourceB;
@@ -59,7 +65,7 @@ public class MusicManager : MonoBehaviour
 
         nextClip = clip;
 
-        Debug.Log("Próxima música: " + clip.name);
+        Debug.Log("Prï¿½xima mï¿½sica: " + clip.name);
 
         
         if (crossfadeRoutine != null) { 
@@ -71,6 +77,8 @@ public class MusicManager : MonoBehaviour
 
     void PlayNow(AudioClip clip)
     {
+        if (currentClip == clip) return;
+        
         currentClip = clip;
 
         currentSource.clip = clip;
@@ -91,7 +99,7 @@ public class MusicManager : MonoBehaviour
         // Espera terminar o loop atual
         yield return new WaitForSeconds(remainingTime);
 
-        // Se ainda existe música na fila
+        // Se ainda existe mï¿½sica na fila
         if (nextClip != null)
         {
             if (crossFade)
@@ -113,7 +121,7 @@ public class MusicManager : MonoBehaviour
 
     private IEnumerator Crossfade()
     {
-        // se não tiver música na fila
+        // se nï¿½o tiver mï¿½sica na fila
         if (nextClip == null)
         {
             crossfadeRoutine = null;
@@ -129,7 +137,7 @@ public class MusicManager : MonoBehaviour
 
         while (time < fadeDuration)
         {
-            // Se a música foi cancelada durante o fade
+            // Se a mï¿½sica foi cancelada durante o fade
             if (nextClip == null)
             {
                 nextSource.Stop();
@@ -161,7 +169,7 @@ public class MusicManager : MonoBehaviour
 
         crossfadeRoutine = null;
 
-        Debug.Log("Nova música: " + currentClip.name);
+        Debug.Log("Nova mï¿½sica: " + currentClip.name);
     }
 
     public void StopMusicNow()
