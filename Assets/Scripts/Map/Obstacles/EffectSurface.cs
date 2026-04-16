@@ -98,6 +98,9 @@ public class EffectSurface : MonoBehaviour
         
         GameManager.Instance.DamagePlayer(damage);
         _lastTimeDamage = Time.time;
+
+        if (!GameManager.Instance.PlayerHealth.IsDead())
+            PlayerController.Instance.RespawnAtSafePosition();
     }
 
     private void ApplyTeleport()

@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
     //state flags
     public bool itsMovementIsBlocked = false;
     [SerializeField] private bool isGrounded = false;
+    private bool isOnHazard = false;
     private bool isRunning = false;
     private bool isKnockBacking = false;
     private float blinkDamageDuration = 1f;
@@ -37,7 +38,8 @@ public class PlayerController : MonoBehaviour
     private PlayerAttack attack;
     public MoveableObstacle currentPlatform;
     private SpriteRenderer playerSprite;
-    
+    private Vector3 lastSafePosition;
+
     // Input System
     private InputSystemActions _input;
 
@@ -82,6 +84,7 @@ public class PlayerController : MonoBehaviour
         attack = GetComponentInParent<PlayerAttack>();
         playerSprite = GetComponentInParent<SpriteRenderer>();
         collider = GetComponentInParent<Collider2D>();
+        lastSafePosition = transform.position;
     }
 
     private void ConfigureInput()
@@ -139,6 +142,7 @@ public class PlayerController : MonoBehaviour
         Flip();
         Move();
         Look();
+        UpdateSafePosition();
     }
     
     private void GetMovement()
@@ -151,6 +155,11 @@ public class PlayerController : MonoBehaviour
     {
         if (!collision.contacts.Any(contactPoint => contactPoint.normal.y > 0.5f)) return;
         isGrounded = true;
+
+        if (collision.transform.root.name == "Hazards")
+        {
+            isOnHazard = true;
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -307,6 +316,20 @@ public class PlayerController : MonoBehaviour
         itsMovementIsBlocked = true;
         _input.Player.Disable();
         attack.OnDisable();
+    }
+
+    void UpdateSafePosition()
+    {
+        if (!isOnHazard && isGrounded && rb.velocity.y >= -0.05f)
+        {
+            lastSafePosition = transform.position;
+        }
+    }
+
+    public void RespawnAtSafePosition()
+    {
+        rb.velocity = Vector2.zero;
+        transform.position = lastSafePosition;
     }
 
     public float LookingFrom() => _lookingFrom;
