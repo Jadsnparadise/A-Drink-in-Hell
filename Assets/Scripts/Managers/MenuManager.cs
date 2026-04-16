@@ -14,6 +14,7 @@ namespace Managers
         public void StartGame()
         {
             SceneManager.LoadScene("Scenes/Inicio");
+            MusicManager.Instance.StopMusicNow();
         }
         
         public void QuitGame()
