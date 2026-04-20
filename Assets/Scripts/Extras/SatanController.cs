@@ -31,7 +31,7 @@ public class SatanController : MonoBehaviour
             {
                 firstTalk.StartDialogue();
 
-                PlayerPrefs.SetInt("first Time", 0); //0 false, 1 true
+                PlayerPrefs.SetInt("FirstTime", 0); //0 false, 1 true
                 Debug.Log("FALOU");
             }
             else

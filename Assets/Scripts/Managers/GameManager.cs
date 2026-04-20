@@ -60,7 +60,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
-        firstTimeTalkingToSatan = PlayerPrefs.GetInt("first Time", 0) != 0;
+        firstTimeTalkingToSatan = PlayerPrefs.GetInt("FirstTime", 1) != 0;
     }
 
     public void StartRound(IngredientSpawner spawner)
