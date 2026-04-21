@@ -43,6 +43,7 @@ public class JesusController : MonoBehaviour
 
    private void OnDialogueFinished()
    {
+      GameManager.Instance.EndGame();
       StartCoroutine(nameof(EndTalk));
    }
 

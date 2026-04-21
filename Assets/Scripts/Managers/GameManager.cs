@@ -140,6 +140,11 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(1);
     }
 
+    public void EndGame()
+    {
+        GameStatePanelController.Instance.ShowCredits();
+    }
+
     public void DamagePlayer(int damage, bool ignoreCooldown = false)
     {
         if (!(_damageCooldownTimer + damageCooldown <= Time.time) && !ignoreCooldown) return;
