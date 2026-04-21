@@ -123,19 +123,21 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    [ContextMenu("Win")]
     void CheckWin()
     {
         if (collectedIngredients.Count == requiredIngredients.Count)
         {
             Debug.Log("DRINK COMPLETO!");
-            Invoke(nameof(GoToSatan), 2f);
             MusicManager.Instance.PlayWinMusic();
+            GameStatePanelController.Instance.ShowWinPanel();
+            Invoke(nameof(GoToSatan), 2f);           
         }
     }
 
     private void GoToSatan()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     public void DamagePlayer(int damage, bool ignoreCooldown = false)
@@ -171,7 +173,7 @@ public class GameManager : MonoBehaviour
     public void ShowGameOver()
     {
         Time.timeScale = 0f; // Pausa o jogo
-        GameOverUI.Instance.ShowGameOver();
+        GameStatePanelController.Instance.ShowGameOver();
     }
 
     public void BackToMainMenu()
