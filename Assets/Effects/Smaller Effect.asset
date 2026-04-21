@@ -15,3 +15,5 @@ MonoBehaviour:
   duration: 5
   sizeMultiplier: 0.3
   cameraIncluded: 1
+  speedIncluded: 1
+  jumpIncluded: 1

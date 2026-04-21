@@ -34,6 +34,7 @@ public class PauseMenu : MonoBehaviour
 
     private void OnPause(InputAction.CallbackContext context)
     {
+        Debug.Log("Pause");
         if (isPaused)
             ResumeGame();
         else
@@ -56,6 +57,8 @@ public class PauseMenu : MonoBehaviour
 
     public void Restart()
     {
+        Time.timeScale = 1f;
+        isPaused = false;
         GameManager.Instance.RestartGame();
     }
 }

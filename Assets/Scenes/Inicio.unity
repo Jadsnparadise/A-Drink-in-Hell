@@ -11598,10 +11598,14 @@ PrefabInstance:
     - target: {fileID: 2980917689901675425, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
-      objectReference: {fileID: 329903910}
+      objectReference: {fileID: 277193896}
     - target: {fileID: 2980917689901675425, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: RestartGame
+      value: Restart
+      objectReference: {fileID: 0}
+    - target: {fileID: 2980917689901675425, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: PauseMenu, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 4087202741143153115, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_text
@@ -11698,6 +11702,10 @@ PrefabInstance:
     - target: {fileID: 6057888031982700146, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_text
       value: Continuar
+      objectReference: {fileID: 0}
+    - target: {fileID: 7129936147196734690, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8468130261625346815, guid: 5f02bb9f99a8c8d4eb226710ba1b3321, type: 3}
       propertyPath: m_Navigation.m_Mode
@@ -17985,17 +17993,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &329903910 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 595032083431241294, guid: 95c3ad3239e29c247aa5ec173a785584, type: 3}
-  m_PrefabInstance: {fileID: 2395732712217169096}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d3c343aea2c6d0b4baa3eaf95c48f6cf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &331280009
 GameObject:
   m_ObjectHideFlags: 0
